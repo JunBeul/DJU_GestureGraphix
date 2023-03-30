@@ -174,6 +174,7 @@ window.onload = () => {
 
       a {
         color: #6faae7;
+        text-decoration-line: none;
       }
     }
 

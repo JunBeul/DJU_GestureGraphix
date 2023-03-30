@@ -27,7 +27,7 @@
     </button>
     <div class="signup-forgotten">
       <p>아직 회원이 아니신가요? <router-link tag="a" to="/signup">회원가입하기</router-link></p>
-      <p><router-link tag="a" to="/about">ID & PW 찾기</router-link></p>
+      <p><router-link tag="a" to="/find/loginid">아이디</router-link> / <router-link tag="a" to="/find/loginpw">비밀번호 찾기</router-link></p>
     </div>
   </div>
 </template>
