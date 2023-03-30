@@ -1,5 +1,5 @@
 <template>
-  <div class="Warp">
+  <div class="warp">
     <h2 class="title">회원가입</h2>
     <form>
       <label for="email">이메일</label>

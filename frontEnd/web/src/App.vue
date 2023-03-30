@@ -96,7 +96,7 @@ window.onload = () => {
       border-radius: 18px;
       border: 1px solid rgba(255, 255, 255, 0.18);
 
-      > div.Warp{
+      > div.warp{
         display: flex;
         flex-direction: column;
         align-items: center;
