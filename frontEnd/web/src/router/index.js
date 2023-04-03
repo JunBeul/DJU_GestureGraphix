@@ -6,40 +6,55 @@ const routes = [
     redirect: "/login",
   },
   {
-    path: "/about",
-    name: "about",
-    component: () => import("@/views/AboutView.vue"),
-  },
-  {
     path: "/login",
     name: "login",
+    meta: {
+      title: "login",
+    },
     component: () => import("@/views/loginView.vue"),
   },
   {
     path: "/signup",
     name: "signup",
-    component: () => import("@/views/signupView.vue"),
-  },
-  {
-    path: "/signup",
-    name: "signup",
+    meta: {
+      title: "signup",
+    },
     component: () => import("@/views/signupView.vue"),
   },
   {
     path: "/find/loginId",
     name: "loginid",
+    meta: {
+      title: "findID",
+    },
     component: () => import("@/views/findLoginIdView.vue"),
   },
   {
     path: "/find/loginPw",
     name: "loginpw",
+    meta: {
+      title: "findPW",
+    },
     component: () => import("@/views/findLoginPwView.vue"),
+  },
+  {
+    path: "/message",
+    name: "message",
+    meta: {
+      title: "message",
+    },
+    component: () => import("@/views/messageView.vue"),
   },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+});
+
+router.afterEach((to, from) => {
+  const title = to.meta.title || packageJson.name
+  if(title) document.title = title
 });
 
 export default router;

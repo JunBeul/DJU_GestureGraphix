@@ -10,6 +10,7 @@
           id="email"
           required="required"
           class="anime"
+          v-model="signup_email"
         />
         <button type="button">인증 메일 전송</button>
       </div>
@@ -22,6 +23,7 @@
         id="id"
         required="required"
         class="anime"
+        v-model="signup_id"
       />
     </form>
     <form>
@@ -32,16 +34,18 @@
         id="pw"
         required="required"
         class="anime"
+        v-model="signup_pw"
       />
     </form>
     <form>
-      <label for="pw">비밀번호 재입력</label>
+      <label for="ConfirmPw">비밀번호 재입력</label>
       <input
         type="password"
         name="ConfirmPw"
         id="ConfirmPw"
         required="required"
         class="anime"
+        v-model="signup_confirmPW"
       />
     </form>
     <button type="submit">
@@ -51,6 +55,20 @@
     <p><router-link tag="a" to="/login">로그인 하러가기</router-link></p>
   </div>
 </template>
+
+<script>
+export default {
+  name: "signup",
+  data() {
+    return {
+      signup_email: '',
+      signup_id: '',
+      signup_pw: '',
+      signup_confirmPW: ''
+    }
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 form{

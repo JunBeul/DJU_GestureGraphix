@@ -9,6 +9,7 @@
         id="email"
         required="required"
         class="anime"
+        v-model="findLoginPw_email"
       />
     </form>
     <form>
@@ -19,6 +20,7 @@
         id="id"
         required="required"
         class="anime"
+        v-model="findLoginPw_id"
       />
     </form>
     <button type="submit">
@@ -29,32 +31,19 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
-nav{
-  width: 100%;
-  ul{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    li{
-      margin: 0 25px;
-      a{
-        background: rgba(255, 255, 255, 0.25);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
-        border-radius: 18px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        display: inline-block;
-        padding: 12px;
-        &:hover{
-          background: rgb(255, 255, 255);
-        }
-      }
+<script>
+export default {
+  name: "findLoginPw",
+  data() {
+    return {
+      findLoginPw_email: '',
+      findLoginPw_id: ''
     }
-  }
-}
+  },
+};
+</script>
+
+<style lang="scss" scoped>
 form{
   flex-direction: column;
   align-items: center;
@@ -76,15 +65,3 @@ button[type = submit] {
   margin-bottom: 25px;
 }
 </style>
-
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
-}
-</script>

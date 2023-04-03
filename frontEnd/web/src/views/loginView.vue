@@ -9,6 +9,7 @@
         id="id"
         required="required"
         class="anime"
+        v-model="login_id"
       />
     </form>
     <form>
@@ -19,6 +20,7 @@
         id="pw"
         required="required"
         class="anime"
+        v-model="login_pw"
       />
     </form>
     <button type="submit">
@@ -31,6 +33,18 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "login",
+  data() {
+    return {
+      login_id: '',
+      login_pw: ''
+    }
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 form{
