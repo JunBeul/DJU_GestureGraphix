@@ -10,12 +10,12 @@ public class CameraMovement : MonoBehaviour
 
     private Vector3 previousPosition;
     private void Update(){
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(1))
         {
             previousPosition=cam.ScreenToViewportPoint(Input.mousePosition);
 
         }
-        else if(Input.GetMouseButton(0)){
+        else if(Input.GetMouseButton(1)){
             Vector3 newPosition=cam.ScreenToViewportPoint(Input.mousePosition);
             Vector3 direction=previousPosition-newPosition;
             float rotationAroundYAxis=-direction.x*180;
