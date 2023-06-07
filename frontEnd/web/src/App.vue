@@ -14,26 +14,11 @@
 
 <script>
 import { app } from '@/assets/js/appCanvas';
-// import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-// import * as THREE from 'three';
-
 
 export default {
   name: "App",
   components: {},
 };
-
-// let scene = new THREE.Scene();
-// const renderer = new THREE.WebGLRenderTarget({
-//   canvas : document.querySelector('#canvasBG-3D')
-// });
-
-// let loader = new GLTFLoader();
-// const modelUrl = new URL('../assets/shiba/scene.gltf', import.meta.url).href;
-// loader.load(modelUrl, function(gltf){
-//   scene.add(gltf.scene);
-//   renderer.render(scene);
-// });
 
 window.onload = () => {
   let canvasTemp = document.querySelector('#canvasBG');
@@ -96,7 +81,7 @@ window.onload = () => {
       border-radius: 18px;
       border: 1px solid rgba(255, 255, 255, 0.18);
 
-      > div.Warp{
+      > div.warp{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -174,6 +159,7 @@ window.onload = () => {
 
       a {
         color: #6faae7;
+        text-decoration-line: none;
       }
     }
 
