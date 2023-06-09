@@ -124,6 +124,7 @@ UnityEngine.CanvasRenderer::set_hasPopInstruction
 UnityEngine.CanvasRenderer::set_materialCount
 UnityEngine.CanvasRenderer::set_popMaterialCount
 UnityEngine.CanvasRenderer::GetMaterial
+UnityEngine.ColorUtility::DoTryParseHtmlColor
 UnityEngine.Component::GetComponentsForListInternal
 UnityEngine.Component::get_gameObject
 UnityEngine.Component::get_transform
@@ -225,6 +226,10 @@ UnityEngine.GL::set_sRGBWrite
 UnityEngine.Gradient::Internal_Equals
 UnityEngine.Gradient::Init
 UnityEngine.Gradient::Cleanup
+UnityEngine.Gradient::Evaluate_Injected
+UnityEngine.Gradient::SetKeys
+UnityEngine.Gradient::get_alphaKeys
+UnityEngine.Gradient::get_colorKeys
 UnityEngine.Graphics::Internal_GetMaxDrawMeshInstanceCount
 UnityEngine.Graphics::Blit2
 UnityEngine.Graphics::Internal_BlitMaterial5
@@ -480,6 +485,8 @@ UnityEngine.Object::set_hideFlags
 UnityEngine.Object::get_hideFlags
 UnityEngine.Object::FindObjectFromInstanceID
 UnityEngine.Object::Internal_CloneSingle
+UnityEngine.Object::Internal_InstantiateSingleWithParent_Injected
+UnityEngine.Object::Internal_InstantiateSingle_Injected
 UnityEngine.Object::FindObjectsOfType
 UnityEngine.ObjectGUIState::Internal_Create
 UnityEngine.ObjectGUIState::Internal_Destroy
@@ -659,6 +666,7 @@ UnityEngine.Texture2D::GetPixelBilinearImpl_Injected
 UnityEngine.Texture2D::ReadPixelsImpl_Injected
 UnityEngine.Texture2D::SetAllPixels32
 UnityEngine.Texture2D::SetPixelImpl_Injected
+UnityEngine.Texture2D::SetPixelsImpl
 UnityEngine.Texture2D::GetPixels32
 UnityEngine.Texture2D::get_whiteTexture
 UnityEngine.Texture2D::get_format
@@ -691,6 +699,7 @@ UnityEngine.Transform::Internal_LookAt_Injected
 UnityEngine.Transform::InverseTransformPoint_Injected
 UnityEngine.Transform::RotateAroundInternal_Injected
 UnityEngine.Transform::SetAsFirstSibling
+UnityEngine.Transform::SetAsLastSibling
 UnityEngine.Transform::SetParent
 UnityEngine.Transform::TransformDirection_Injected
 UnityEngine.Transform::TransformPoint_Injected
@@ -711,6 +720,7 @@ UnityEngine.Transform::set_rotation_Injected
 UnityEngine.Transform::FindRelativeTransformWithPath
 UnityEngine.Transform::GetChild
 UnityEngine.Transform::GetParent
+UnityEngine.Transform::GetRoot
 UnityEngine.U2D.SpriteAtlas::CanBindTo
 UnityEngine.U2D.SpriteAtlasManager::Register
 UnityEngine.UIElements.TextNative::DoComputeTextHeight_Injected
@@ -747,6 +757,8 @@ UnityEngine.UISystemProfilerApi::AddMarker
 UnityEngine.UISystemProfilerApi::BeginSample
 UnityEngine.UISystemProfilerApi::EndSample
 UnityEngine.Vector3::OrthoNormalize2
+UnityEngine.WebCamTexture::Internal_CreateWebCamTexture
+UnityEngine.WebCamTexture::Play
 UnityEngine.Yoga.Native::YGConfigGetUseWebDefaults
 UnityEngine.Yoga.Native::YGNodeGetHasNewLayout
 UnityEngine.Yoga.Native::YGNodeIsDirty
