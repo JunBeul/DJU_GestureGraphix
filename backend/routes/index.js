@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/login', (req, res) => {
-  const { username, password } = req.body;
+  const { login_id, login_pw } = req.body;
 
   // 간단한 로그인 처리
   if (login_id === 'test' && login_pw === 'test') {

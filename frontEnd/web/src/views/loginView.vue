@@ -45,45 +45,52 @@ export default {
       loginSuccess: false,
       loginMessage: '',
     };
-    methods: {
-      login(event) {
-        event.preventDefault();
-        // 로그인 요청을 보낼 서버 주소
-        const loginUrl = '/login'; // Express 서버의 로그인 라우트에 맞게 변경
+  },
+  methods: {
+    login(event) {
+      event.preventDefault();
+      // 로그인 요청을 보낼 서버 주소
+      const loginUrl = "/login"; // Express 서버의 로그인 라우트에 맞게 변경
 
-        // 로그인 요청을 보내는 비동기 함수
-        const sendLoginRequest = async () => {
-          try {
-            const response = await fetch(loginUrl, {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({
-                login_id: this.login_id,
-                login_pw: this.login_pw
-              })
-            });
-            const data = await response.json();
-            if (response.ok) {
-              this.loginSuccess = true;
-              this.loginMessage = data.message;
-            } else {
-              this.loginSuccess = false;
-              this.loginMessage = data.message;
-            }
+      // 로그인 요청을 보내는 비동기 함수
+      const sendLoginRequest = async () => {
+        try {
+          // axios를 사용하지 않고 fetch API를 사용하여 로그인 요청을 보냄
+          const response = await fetch(loginUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              login_id: this.login_id,
+              login_pw: this.login_pw,
+            }),
+          });
 
-            this.showMessage = true;
-          } catch (error) {
-            console.error(error);
+          const data = await response.json();
+
+          // 서버로부터의 응답을 기반으로 팝업 메시지를 설정
+          if (response.ok) {
+            this.loginSuccess = true;
+            this.loginMessage = data.message;
+            alert("로그인 성공");
+          } else {
+            this.loginSuccess = false;
+            this.loginMessage = data.message;
+            alert("로그인 실패");
           }
-        };
 
-        // 로그인 요청 함수 호출
-        sendLoginRequest();
-      }
-    }
-  };
+          this.showMessage = true;
+        } catch (error) {
+          console.error(error);
+        }
+      };
+
+      // 로그인 요청 함수 호출
+      sendLoginRequest();
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
