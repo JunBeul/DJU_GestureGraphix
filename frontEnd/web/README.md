@@ -16,13 +16,16 @@ UI는 글라스 모피즘을 사용하여 가상 현실에 떠있는 화면이�
 ## 페이지 소개
 ### 1. 로그인
 <img src = "./webReadmeImg/login.png" width="">
+* 해당 페이지를 통해 login을 진행하거나 다른 메뉴를 선택할 수 있습니다.
 
 ### 2. 회원가입
 <img src = "./webReadmeImg/singup.png" width="">
+* 해당 페이지를 통해 sing up을 진행합니다.
 
 ### 3. ID, PW 찾기
 <img src = "./webReadmeImg/findID.png" width="">
-<img src = "./webReadmeImg/find.png" width="">
+<img src = "./webReadmeImg/findPW.png" width="">
+* 해당 페이지를 통해 아이디를 찾거나 비밀번호를 찾을 수 있습니다.
 
 ## 기술스택
 * vue
