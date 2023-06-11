@@ -1,5 +1,5 @@
 <template>
-  <div class="Warp">
+  <div class="warp">
     <h2 class="title">로그인</h2>
     <form>
       <label for="id">ID</label>
@@ -9,6 +9,7 @@
         id="id"
         required="required"
         class="anime"
+        v-model="login_id"
       />
     </form>
     <form>
@@ -19,6 +20,7 @@
         id="pw"
         required="required"
         class="anime"
+        v-model="login_pw"
       />
     </form>
     <button type="submit">
@@ -27,10 +29,22 @@
     </button>
     <div class="signup-forgotten">
       <p>아직 회원이 아니신가요? <router-link tag="a" to="/signup">회원가입하기</router-link></p>
-      <p><router-link tag="a" to="/about">ID & PW 찾기</router-link></p>
+      <p><router-link tag="a" to="/find/loginId">아이디</router-link> / <router-link tag="a" to="/find/loginPw">비밀번호 찾기</router-link></p>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "login",
+  data() {
+    return {
+      login_id: '',
+      login_pw: ''
+    }
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 form{
