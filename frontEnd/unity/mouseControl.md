@@ -15,5 +15,5 @@
 
 ![ezgif com-video-to-gif](https://github.com/JunBeul/GestureGraphix/assets/80021360/547597cd-8c14-41c0-8f9c-b883f9ec0f02)
 -------------------------------
-##기술 스택
+#기술 스택
 1. 유니티 - C#
