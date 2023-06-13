@@ -1,7 +1,25 @@
 # backend
 백엔드 작업물
 
-# 로그인 기능 추가
+# 로그인 기능
+--------------------
+## 입력한 아이디와 비밀번호를 검사해서 맞는지 틀린지 구별하고 그에 맞는 팝업창을 띄웁니다.
+클라이언트에서 아이디와 비밀번호를 입력하면, 서버에 등록된 값과 맞는지 비교해서 성공 혹은 실패 값을 반환합니다.
+현재 서버에 아이디와 비밀번호는 (test, test)로 저장되어 있습니다.
+
+1. 옳은 값을 입력했을 때의 메세지
+
+![ezgif com-video-to-gif (1)](https://leesamgsoo.github.io/imgvideo/%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%84%B1%EA%B3%B5.gif)
+
+2. 틀린 값을 입력했을 때의 메세지
+
+![ezgif com-video-to-gif (2)](https://leesamgsoo.github.io/imgvideo/%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%8B%A4%ED%8C%A8.gif)
+
+-------------------------------
+#기술 스택
+1. MongoDB - Express.js - Vue.js - Node.js
+
+# 로그인 기능 코드
 
 ### 프론트엔드 수정 부분
 ```
