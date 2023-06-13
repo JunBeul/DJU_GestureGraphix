@@ -17,7 +17,7 @@
 
 -------------------------------
 #기술 스택
-1. MongoDB - Express.js - Vue.js - Node.js
+Express.js - Node.js - MongoDB 
 
 # 로그인 기능 코드
 
