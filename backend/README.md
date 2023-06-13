@@ -13,7 +13,7 @@
 
 2. 틀린 값을 입력했을 때의 메세지
 
-![ezgif com-video-to-gif (2)](https://leesamgsoo.github.io/imgvideo/%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%8B%A4%ED%8C%A8.gif)
+<img src = "./readMeImg/로그인 실패.gif" width="">
 
 -------------------------------
 #기술 스택
