@@ -9,7 +9,7 @@
 
 1. 옳은 값을 입력했을 때의 메세지
 
-![ezgif com-video-to-gif (1)](https://leesamgsoo.github.io/imgvideo/%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%84%B1%EA%B3%B5.gif)
+![ezgif com-video-to-gif (1)](https://github.com/JunBeul/GestureGraphix/backend/readMeImg/%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%84%B1%EA%B3%B5.gif)
 
 2. 틀린 값을 입력했을 때의 메세지
 
