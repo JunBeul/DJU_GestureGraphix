@@ -3,7 +3,7 @@ var router = express.Router();
 
 //db 연결 코드
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://mongnoj892:ScRC4W4GLaoyAsm1@cluster0.c593zzk.mongodb.net/?retryWrites=true&w=majority";
+const uri = "보안상 삭제";
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
