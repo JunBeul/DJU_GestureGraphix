@@ -36,10 +36,10 @@ router.post('/login', (req, res) => {
         user_id: login_id,
         user_pw: login_pw
       };
-      const filteredData = await collection.find(query).toArray();
+      const loginData = await collection.find(query).toArray();
       console.log("result:");
-      console.log(filteredData);
-      if(filteredData[0] === undefined){
+      console.log(loginData);
+      if(loginData[0] === undefined){
         res.status(401).json({ message: '로그인 실패' });
       } else{
         res.status(200).json({ message: '로그인 성공' });
@@ -53,12 +53,64 @@ router.post('/login', (req, res) => {
   }
   run().catch(console.dir);
 
-  // 간단한 로그인 처리
-  /*if (login_id === 'test' && login_pw === 'test') {
-    res.status(200).json({ message: '로그인 성공' });
-  } else {
-    res.status(401).json({ message: '로그인 실패' });
-  }*/
 });
+
+router.post('/find/loginId', async (req, res) => {
+  try {
+    await client.connect();
+    const database = client.db("gesture_graphix");
+    const collection = database.collection("gg_member");
+
+    const { findLoginId_email } = req.body; // Extract email from request body
+
+    const query = {
+      email: findLoginId_email,
+    };
+
+    const findIdData = await collection.find(query).toArray();
+
+    if (findIdData.length === 0) { // Check if data exists using array length
+      res.status(401).json({ message: '등록된 ID가 존재하지 않습니다.' });
+    } else {
+      res.status(200).json({ findLogin_id: findIdData.map(doc => doc.user_id) });
+    }
+  } catch (err) {
+    console.error("Error:", err);
+    res.status(500).json({ message: '서버 오류가 발생했습니다.' }); // Handle server errors
+  } finally {
+    await client.close();
+  }
+});
+
+    /*router.post('/find/loginId', (req, res) => {
+      const findLoginId_email = req.body;//이메일로 가입된 아이디가 있으면 아이디를 리턴
+
+      async function run() {
+        try {
+          await client.connect();
+          const database = client.db("gesture_graphix");
+          const collection = database.collection("gg_member");
+
+          const query = {
+            email: findLoginId_email,
+          };
+          const findIdData = await collection.find(query).toArray();
+          console.log("result:");
+          console.log(findIdData);
+          if(findIdData[0] === undefined){
+            res.status(401).json({ message: '등록된 ID가 존재하지 않습니다.' });
+          } else{
+            res.status(200).json({ findLogin_Id: findIdData.map(doc => doc.email) });
+          }
+        } catch (err) {
+          console.error("Error:", err);
+        } finally {
+          // Ensures that the client will close when you finish/error
+          await client.close();
+        }
+      }
+      run().catch(console.dir);
+
+    });*/
 
 module.exports = router;
