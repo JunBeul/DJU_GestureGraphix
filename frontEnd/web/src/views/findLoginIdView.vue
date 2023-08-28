@@ -50,7 +50,7 @@ export default {
 
         // 서버로부터의 응답을 기반으로 팝업 메시지를 설정
         if (response.ok) {
-          this.findLogin_id = data.findLogin_id;
+          this.findLogin_id = "등록된 아이디는 " + data.findLogin_id + " 입니다.";
           alert(this.findLogin_id);
         } else {
           alert("해당 이메일은 등록되지 않았습니다.");
