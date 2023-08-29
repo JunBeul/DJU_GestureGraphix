@@ -39,11 +39,11 @@ export default {
   name: "login",
   data() {
     return {
-      login_id: '',
-      login_pw: '',
+      login_id: "",
+      login_pw: "",
       showMessage: false,
       loginSuccess: false,
-      loginMessage: '',
+      loginMessage: "",
     };
   },
   methods: {

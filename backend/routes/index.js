@@ -72,7 +72,7 @@ router.post('/find/loginId', async (req, res) => {
     if (findIdData.length === 0) { // Check if data exists using array length
       res.status(401).json({ message: '등록된 ID가 존재하지 않습니다.' });
     } else {
-      res.status(200).json({ findLogin_id: findIdData.map(doc => doc.user_id) });
+      res.status(200).json({ founded_id: findIdData.map(doc => doc.user_id) });
     }
   } catch (err) {
     console.error("Error:", err);
@@ -82,35 +82,33 @@ router.post('/find/loginId', async (req, res) => {
   }
 });
 
-    /*router.post('/find/loginId', (req, res) => {
-      const findLoginId_email = req.body;//이메일로 가입된 아이디가 있으면 아이디를 리턴
+router.post('/find/loginPw', async (req, res) => {
+  try {
+    await client.connect();
+    const database = client.db("gesture_graphix");
+    const collection = database.collection("gg_member");
 
-      async function run() {
-        try {
-          await client.connect();
-          const database = client.db("gesture_graphix");
-          const collection = database.collection("gg_member");
+    const { findLoginPw_email, findLoginPw_id } = req.body; // Extract email from request body
 
-          const query = {
-            email: findLoginId_email,
-          };
-          const findIdData = await collection.find(query).toArray();
-          console.log("result:");
-          console.log(findIdData);
-          if(findIdData[0] === undefined){
-            res.status(401).json({ message: '등록된 ID가 존재하지 않습니다.' });
-          } else{
-            res.status(200).json({ findLogin_Id: findIdData.map(doc => doc.email) });
-          }
-        } catch (err) {
-          console.error("Error:", err);
-        } finally {
-          // Ensures that the client will close when you finish/error
-          await client.close();
-        }
-      }
-      run().catch(console.dir);
+    const query = {
+      email: findLoginPw_email,
+    };
 
-    });*/
+    const findPwData = await collection.find(query).toArray();
+
+    if (findPwData.length === 0) { // Check if data exists using array length
+      res.status(401).json({ message: '해당 이메일은 등록되지 않았습니다..' });
+    } else if(findPwData.map(doc => doc.user_id) != findLoginPw_id){
+      res.status(401).json({ message: '입력된 ID가 잘못 되었습니다.' });
+    } else {
+      res.status(200).json({ founded_pw: findPwData.map(doc => doc.user_pw) });
+    }
+  } catch (err) {
+    console.error("Error:", err);
+    res.status(500).json({ message: '서버 오류가 발생했습니다.' }); // Handle server errors
+  } finally {
+    await client.close();
+  }
+});
 
 module.exports = router;
