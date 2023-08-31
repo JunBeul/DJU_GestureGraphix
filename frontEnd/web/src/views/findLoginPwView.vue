@@ -42,7 +42,7 @@ export default {
     };
   },
   methods: {
-    async findLoginId() {
+    async findLoginPw() {
       try {
         // 아이디 찾기 요청을 보낼 서버 주소
         const findPwUrl = "/find/loginPw"; // Express 서버의 로그인 라우트에 맞게 변경
@@ -65,7 +65,7 @@ export default {
         if (response.ok) {
           this.founded_pw = "등록된 패스워드는 " + data.founded_pw + " 입니다.";
         } else {
-          this.founded_pw = response.statusMessage;
+          this.founded_pw = data.message;
         }
         alert(this.founded_pw);
       } catch (error) {

@@ -68,6 +68,8 @@ router.post('/find/loginId', async (req, res) => {
     };
 
     const findIdData = await collection.find(query).toArray();
+    console.log("result:");
+    console.log(findIdData);
 
     if (findIdData.length === 0) { // Check if data exists using array length
       res.status(401).json({ message: '등록된 ID가 존재하지 않습니다.' });
@@ -95,9 +97,11 @@ router.post('/find/loginPw', async (req, res) => {
     };
 
     const findPwData = await collection.find(query).toArray();
+    console.log("result:");
+    console.log(findPwData);
 
     if (findPwData.length === 0) { // Check if data exists using array length
-      res.status(401).json({ message: '해당 이메일은 등록되지 않았습니다..' });
+      res.status(401).json({ message: '해당 이메일은 등록되지 않았습니다.' });
     } else if(findPwData.map(doc => doc.user_id) != findLoginPw_id){
       res.status(401).json({ message: '입력된 ID가 잘못 되었습니다.' });
     } else {
