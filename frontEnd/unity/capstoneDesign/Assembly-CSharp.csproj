@@ -272,6 +272,17 @@
      <Compile Include="Assets\VRM\UniVRM\Scripts\Format\VRMSpecVersion.cs" />
      <Compile Include="Assets\VRM\UniGLTF\Scripts\IO\MeshExporter.cs" />
      <Compile Include="Assets\VRM\UniJSON\Scripts\JsonSchemaValidator\JsonArrayValidator.cs" />
+     <Compile Include="Assets\ColorGradientPicker\Scripts\ColorPicker.cs" />
+     <Compile Include="Assets\ColorGradientPicker\Scripts\GradientPicker.cs" />
+     <Compile Include="Assets\ColorGradientPicker\Scripts\DragWindowCntrl.cs" />
+     <Compile Include="Assets\ColorGradientPicker\SampleSceneAssets\GradientPickerExample.cs" />
+     <Compile Include="Assets\ColorGradientPicker\SampleSceneAssets\ColorPickerExampleScript.cs" />
+     <Compile Include="Assets\BackgroundColorChanger.cs" />
+     <Compile Include="Assets\WebcamController.cs" />
+     <Compile Include="Assets\ButtonController.cs" />
+     <Compile Include="Assets\PopupManager.cs" />
+     <Compile Include="Assets\ButtonHandler.cs" />
+     <Compile Include="Assets\PopupHandler.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -543,13 +554,13 @@
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="ReportGeneratorMerged">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\PackageCache\com.unity.testtools.codecoverage@1.2.2\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\PackageCache\com.unity.testtools.codecoverage@1.2.2\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -918,97 +929,97 @@
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.003">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.003.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.003.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VectorGraphics">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VectorGraphics.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VectorGraphics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEngineBridge.003">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.003.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.003.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Analytics">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Environments">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VectorGraphics.Editor">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VectorGraphics.Editor.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VectorGraphics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
-        <HintPath>C:\Users\geuns\Desktop\unityP\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+        <HintPath>C:\Users\geuns\OneDrive\바탕 화면\unity\GestureGraphix\frontEnd\unity\capstoneDesign\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

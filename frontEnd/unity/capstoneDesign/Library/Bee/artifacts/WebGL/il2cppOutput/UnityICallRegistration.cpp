@@ -576,6 +576,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.CanvasRenderer
 
+	//Start Registrations for type : UnityEngine.ColorUtility
+
+		//System.Boolean UnityEngine.ColorUtility::DoTryParseHtmlColor(System.String,UnityEngine.Color32&)
+		void Register_UnityEngine_ColorUtility_DoTryParseHtmlColor();
+		Register_UnityEngine_ColorUtility_DoTryParseHtmlColor();
+
+	//End Registrations for type : UnityEngine.ColorUtility
+
 	//Start Registrations for type : UnityEngine.Component
 
 		//System.Void UnityEngine.Component::GetComponentsForListInternal(System.Type,System.Object)
@@ -1049,6 +1057,22 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Gradient::Cleanup()
 		void Register_UnityEngine_Gradient_Cleanup();
 		Register_UnityEngine_Gradient_Cleanup();
+
+		//System.Void UnityEngine.Gradient::Evaluate_Injected(System.Single,UnityEngine.Color&)
+		void Register_UnityEngine_Gradient_Evaluate_Injected();
+		Register_UnityEngine_Gradient_Evaluate_Injected();
+
+		//System.Void UnityEngine.Gradient::SetKeys(UnityEngine.GradientColorKey[],UnityEngine.GradientAlphaKey[])
+		void Register_UnityEngine_Gradient_SetKeys();
+		Register_UnityEngine_Gradient_SetKeys();
+
+		//UnityEngine.GradientAlphaKey[] UnityEngine.Gradient::get_alphaKeys()
+		void Register_UnityEngine_Gradient_get_alphaKeys();
+		Register_UnityEngine_Gradient_get_alphaKeys();
+
+		//UnityEngine.GradientColorKey[] UnityEngine.Gradient::get_colorKeys()
+		void Register_UnityEngine_Gradient_get_colorKeys();
+		Register_UnityEngine_Gradient_get_colorKeys();
 
 	//End Registrations for type : UnityEngine.Gradient
 
@@ -2182,6 +2206,14 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Object_Internal_CloneSingle();
 		Register_UnityEngine_Object_Internal_CloneSingle();
 
+		//UnityEngine.Object UnityEngine.Object::Internal_InstantiateSingleWithParent_Injected(UnityEngine.Object,UnityEngine.Transform,UnityEngine.Vector3&,UnityEngine.Quaternion&)
+		void Register_UnityEngine_Object_Internal_InstantiateSingleWithParent_Injected();
+		Register_UnityEngine_Object_Internal_InstantiateSingleWithParent_Injected();
+
+		//UnityEngine.Object UnityEngine.Object::Internal_InstantiateSingle_Injected(UnityEngine.Object,UnityEngine.Vector3&,UnityEngine.Quaternion&)
+		void Register_UnityEngine_Object_Internal_InstantiateSingle_Injected();
+		Register_UnityEngine_Object_Internal_InstantiateSingle_Injected();
+
 		//UnityEngine.Object[] UnityEngine.Object::FindObjectsOfType(System.Type,System.Boolean)
 		void Register_UnityEngine_Object_FindObjectsOfType();
 		Register_UnityEngine_Object_FindObjectsOfType();
@@ -3018,6 +3050,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Texture2D_SetPixelImpl_Injected();
 		Register_UnityEngine_Texture2D_SetPixelImpl_Injected();
 
+		//System.Void UnityEngine.Texture2D::SetPixelsImpl(System.Int32,System.Int32,System.Int32,System.Int32,UnityEngine.Color[],System.Int32,System.Int32)
+		void Register_UnityEngine_Texture2D_SetPixelsImpl();
+		Register_UnityEngine_Texture2D_SetPixelsImpl();
+
 		//UnityEngine.Color32[] UnityEngine.Texture2D::GetPixels32(System.Int32)
 		void Register_UnityEngine_Texture2D_GetPixels32();
 		Register_UnityEngine_Texture2D_GetPixels32();
@@ -3166,6 +3202,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Transform_SetAsFirstSibling();
 		Register_UnityEngine_Transform_SetAsFirstSibling();
 
+		//System.Void UnityEngine.Transform::SetAsLastSibling()
+		void Register_UnityEngine_Transform_SetAsLastSibling();
+		Register_UnityEngine_Transform_SetAsLastSibling();
+
 		//System.Void UnityEngine.Transform::SetParent(UnityEngine.Transform,System.Boolean)
 		void Register_UnityEngine_Transform_SetParent();
 		Register_UnityEngine_Transform_SetParent();
@@ -3245,6 +3285,10 @@ void RegisterAllStrippedInternalCalls()
 		//UnityEngine.Transform UnityEngine.Transform::GetParent()
 		void Register_UnityEngine_Transform_GetParent();
 		Register_UnityEngine_Transform_GetParent();
+
+		//UnityEngine.Transform UnityEngine.Transform::GetRoot()
+		void Register_UnityEngine_Transform_GetRoot();
+		Register_UnityEngine_Transform_GetRoot();
 
 	//End Registrations for type : UnityEngine.Transform
 
@@ -3419,6 +3463,18 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Vector3_OrthoNormalize2();
 
 	//End Registrations for type : UnityEngine.Vector3
+
+	//Start Registrations for type : UnityEngine.WebCamTexture
+
+		//System.Void UnityEngine.WebCamTexture::Internal_CreateWebCamTexture(UnityEngine.WebCamTexture,System.String,System.Int32,System.Int32,System.Int32)
+		void Register_UnityEngine_WebCamTexture_Internal_CreateWebCamTexture();
+		Register_UnityEngine_WebCamTexture_Internal_CreateWebCamTexture();
+
+		//System.Void UnityEngine.WebCamTexture::Play()
+		void Register_UnityEngine_WebCamTexture_Play();
+		Register_UnityEngine_WebCamTexture_Play();
+
+	//End Registrations for type : UnityEngine.WebCamTexture
 
 	//Start Registrations for type : UnityEngine.Yoga.Native
 
