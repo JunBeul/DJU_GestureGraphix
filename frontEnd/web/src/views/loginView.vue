@@ -39,11 +39,11 @@ export default {
   name: "login",
   data() {
     return {
-      login_id: '',
-      login_pw: '',
+      login_id: "",
+      login_pw: "",
       showMessage: false,
       loginSuccess: false,
-      loginMessage: '',
+      loginMessage: "",
     };
   },
   methods: {
@@ -72,13 +72,11 @@ export default {
           // 서버로부터의 응답을 기반으로 팝업 메시지를 설정
           if (response.ok) {
             this.loginSuccess = true;
-            this.loginMessage = data.message;
-            alert("로그인 성공");
           } else {
             this.loginSuccess = false;
-            this.loginMessage = data.message;
-            alert("로그인 실패");
           }
+          this.loginMessage = data.message;
+          alert(this.loginMessage);
 
           this.showMessage = true;
         } catch (error) {
