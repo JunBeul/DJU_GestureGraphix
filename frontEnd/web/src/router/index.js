@@ -45,6 +45,14 @@ const routes = [
     },
     component: () => import("@/views/messageView.vue"),
   },
+  {
+    path: "/unityView",
+    name: "unityView",
+    meta: {
+      title: "unityView",
+    },
+    component: () => import("@/views/unityView.vue"),
+  },
 ];
 
 const router = createRouter({
