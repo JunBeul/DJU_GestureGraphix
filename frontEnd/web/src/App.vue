@@ -7,7 +7,7 @@
       <div class="contents">
         <router-view />
       </div>
-      <p class="copy">ⓒ 2023. JunBeul. All rights reserved.</p>
+      <p class="copy">ⓒ 2023. VirtualVerse. All rights reserved.</p>
     </div>
   </div>
 </template>

@@ -9,7 +9,7 @@ const routes = [
     path: "/login",
     name: "login",
     meta: {
-      title: "login",
+      title: "로그인",
     },
     component: () => import("@/views/loginView.vue"),
   },
@@ -17,7 +17,7 @@ const routes = [
     path: "/signup",
     name: "signup",
     meta: {
-      title: "signup",
+      title: "회원가입",
     },
     component: () => import("@/views/signupView.vue"),
   },
@@ -25,7 +25,7 @@ const routes = [
     path: "/find/loginId",
     name: "loginid",
     meta: {
-      title: "findID",
+      title: "아이디 찾기",
     },
     component: () => import("@/views/findLoginIdView.vue"),
   },
@@ -33,7 +33,7 @@ const routes = [
     path: "/find/loginPw",
     name: "loginpw",
     meta: {
-      title: "findPW",
+      title: "비밀번호 찾기",
     },
     component: () => import("@/views/findLoginPwView.vue"),
   },
@@ -46,12 +46,21 @@ const routes = [
     component: () => import("@/views/messageView.vue"),
   },
   {
+
     path: "/unityView",
     name: "unityView",
     meta: {
       title: "unityView",
     },
     component: () => import("@/views/unityView.vue"),
+
+    path: "/ChangePw",
+    name: "ChangePw",
+    meta: {
+      title: "비밀번호 변경",
+    },
+    component: () => import("@/views/ChangePw.vue"),
+
   },
 ];
 
