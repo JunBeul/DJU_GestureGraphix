@@ -46,12 +46,21 @@ const routes = [
     component: () => import("@/views/messageView.vue"),
   },
   {
+
+    path: "/unityView",
+    name: "unityView",
+    meta: {
+      title: "unityView",
+    },
+    component: () => import("@/views/unityView.vue"),
+
     path: "/ChangePw",
     name: "ChangePw",
     meta: {
       title: "비밀번호 변경",
     },
     component: () => import("@/views/ChangePw.vue"),
+
   },
 ];
 

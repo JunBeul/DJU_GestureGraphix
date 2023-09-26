@@ -12,7 +12,6 @@
           class="anime"
           v-model="signup_email"
         />
-        <button type="button">인증 메일 전송</button>
       </div>
     </form>
     <form>
@@ -48,7 +47,7 @@
         v-model="signup_confirmPW"
       />
     </form>
-    <button type="submit">
+    <button type="submit" @click="emailCertification">
       <div class="anime"></div>
       <p class="anime">SIGN UP</p>
     </button>
@@ -61,17 +60,55 @@ export default {
   name: "signup",
   data() {
     return {
-      signup_email: '',
-      signup_id: '',
-      signup_pw: '',
-      signup_confirmPW: ''
-    }
+      signup_email: "",
+      signup_id: "",
+      signup_pw: "",
+      signup_confirmPW: "",
+    };
+  },
+  methods: {
+    emailCertification(event) {
+      event.preventDefault();
+      const emailCUrl = "/emailCertification";
+      const sendEmailCRequest = async () => {
+        try {
+          const response = await fetch(emailCUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              signup_id: this.signup_id,
+              signup_pw: this.signup_pw,
+              signup_email: this.signup_email,
+            }),
+          });
+
+          const data = await response.json();
+          alert(data.message);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      // 함수 호출
+      if (this.signup_email === "") alert("이메일을 입력해 주세요.");
+      else if (!emailPattern.test(this.signup_email))
+        alert("올바른 이메일 형식이 아닙니다.");
+      else if (this.signup_id === "") alert("아이디를 입력해 주세요.");
+      else if (this.signup_pw === "") alert("비밀번호를 입력해 주세요.");
+      else if (this.signup_confirmPW === "")
+        alert("비밀번호 재입력 칸을 입력해 주세요.");
+      else if (this.signup_confirmPW !== this.signup_pw)
+        alert("비밀번호가 일치하지 않습니다.");
+      else sendEmailCRequest();
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-form{
+form {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -86,13 +123,9 @@ form{
   }
   input {
     width: 500px;
-
-    &#email{
-      width: 350px;
-    }
   }
 }
-button[type = submit] {
+button[type="submit"] {
   margin-bottom: 25px;
 }
 </style>
