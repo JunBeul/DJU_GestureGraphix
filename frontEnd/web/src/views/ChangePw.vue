@@ -2,6 +2,28 @@
   <div class="warp">
     <h2 class="title">비밀번호 변경</h2>
     <form>
+      <label for="id">아이디</label>
+      <input
+        type="text"
+        name="id"
+        id="id"
+        required="required"
+        class="anime"
+        v-model="present_id"
+      />
+    </form>
+    <form>
+      <label for="pw">현재 비밀번호</label>
+      <input
+        type="password"
+        name="pw"
+        id="pw"
+        required="required"
+        class="anime"
+        v-model="present_pw"
+      />
+    </form>
+    <form>
       <label for="pw">변경할 비밀번호</label>
       <input
         type="password"
@@ -9,41 +31,79 @@
         id="pw"
         required="required"
         class="anime"
-        v-model="signup_pw"
+        v-model="change_pw"
       />
     </form>
     <form>
-      <label for="ConfirmPw">비밀번호 확인</label>
+      <label for="ConfirmPw">변경할 비밀번호 확인</label>
       <input
         type="password"
         name="ConfirmPw"
         id="ConfirmPw"
         required="required"
         class="anime"
-        v-model="signup_confirmPW"
+        v-model="change_confirmPW"
       />
     </form>
-    <button type="submit">
+    <button type="submit" @click="changePassword">
       <div class="anime"></div>
       <p class="anime">확인</p>
     </button>
+    <p><router-link tag="a" to="/login">로그인 하러가기</router-link></p>
   </div>
 </template>
 
 <script>
 export default {
-  name: "signup",
+  name: "ChangePw",
   data() {
     return {
-      signup_pw: '',
-      signup_confirmPW: ''
-    }
+      present_id: "",
+      present_pw: "",
+      change_pw: "",
+      change_confirmPW: "",
+    };
+  },
+  methods: {
+    changePassword(event) {
+      event.preventDefault();
+      const changePwUrl = "/changePassword";
+      const changePw = async () => {
+        try {
+          const response = await fetch(changePwUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              present_id: this.present_id,
+              present_pw: this.present_pw,
+              change_pw: this.change_pw,
+            }),
+          });
+
+          const data = await response.json();
+          alert(data.message);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      // 함수 호출
+      if (this.present_id === "") alert("아이디를 입력해 주세요.");
+      else if (this.present_pw === "") alert("현재 비밀번호를 입력해 주세요.");
+      else if (this.change_pw === "") alert("변경할 비밀번호를 입력해 주세요.");
+      else if (this.change_confirmPW === "")
+        alert("비밀번호 확인 칸을 입력해 주세요.");
+      else if (this.change_pw !== this.change_confirmPW)
+        alert("변경할 비밀번호가 일치하지 않습니다.");
+      else changePw();
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-form{
+form {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -59,12 +119,12 @@ form{
   input {
     width: 500px;
 
-    &#email{
+    &#email {
       width: 350px;
     }
   }
 }
-button[type = submit] {
+button[type="submit"] {
   margin-bottom: 25px;
 }
 </style>

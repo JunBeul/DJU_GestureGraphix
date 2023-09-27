@@ -5,8 +5,8 @@ const nodemailer = require('nodemailer');
 //db 연결 코드
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const path = require("path");
-//process.env 어쩌구로 주소 숨기기
-const uri = process.env.MONG_D_URL;
+
+const uri = process.env.MONG_D_URL ;
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
@@ -219,6 +219,48 @@ router.post('/verifiedComplete', async (req , res) => {
       res.status(401).json({ message: '회원 가입한 이메일이 아닙니다.' });
     } else {
       res.status(200).json({ message: '회원 가입 완료' });
+    }
+  } catch (err) {
+    console.error("Error:", err);
+    res.status(500).json({ message: '서버 오류가 발생했습니다.' });
+  } finally {
+    await client.close();
+  }
+});
+
+router.post('/changePassword', async (req, res) => {
+  try {
+    // MongoDB 클라이언트 연결
+    await client.connect();
+
+    const database = client.db("gesture_graphix");
+    const collection = database.collection("gg_member");
+
+    const {
+      present_id,
+      present_pw,
+      change_pw,
+    } = req.body;
+
+    const query = {
+      user_id: present_id,
+      user_pw: present_pw,
+    };
+
+    const userData = await collection.findOne(query);
+
+    if (!userData) {
+      res.status(401).json({ message: '계정 정보가 존재하지 않습니다' });
+    } else {
+      const updateQuery = {
+        $set: { user_pw: change_pw }
+      };
+      const changeData = await collection.updateOne(query, updateQuery);
+      if (changeData.matchedCount !== 1) {
+        res.status(401).json({ message: '변경에 실패했습니다.' });
+      } else {
+        res.status(200).json({ message: '비밀번호 변경 완료' });
+      }
     }
   } catch (err) {
     console.error("Error:", err);
