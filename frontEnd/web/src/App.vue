@@ -70,7 +70,7 @@ window.onload = () => {
     }
 
     .contents {
-      width: 600px;
+      min-width: 600px;
       margin-bottom: 25px;
       padding: 25px;
 
