@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const path = require("path");
 
-const uri = process.env.MONG_D_URL || "mongodb+srv://mongnoj892:ScRC4W4GLaoyAsm1@cluster0.c593zzk.mongodb.net/?retryWrites=true&w=majority";
+const uri = process.env.MONG_D_URL ;
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
