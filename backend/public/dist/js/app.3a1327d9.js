@@ -2,7 +2,7 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 4765:
+/***/ 2275:
 /***/ (function(__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) {
 
 
@@ -10,7 +10,7 @@
 var runtime_dom_esm_bundler = __webpack_require__(9242);
 // EXTERNAL MODULE: ./node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js
 var runtime_core_esm_bundler = __webpack_require__(3396);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/App.vue?vue&type=template&id=0dbaec6b
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/App.vue?vue&type=template&id=62bfce2a
 
 const _hoisted_1 = {
   class: "warpper"
@@ -29,12 +29,12 @@ const _hoisted_5 = {
 };
 const _hoisted_6 = /*#__PURE__*/(0,runtime_core_esm_bundler/* createElementVNode */._)("p", {
   class: "copy"
-}, "ⓒ 2023. JunBeul. All rights reserved.", -1);
+}, "ⓒ 2023. VirtualVerse. All rights reserved.", -1);
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_router_view = (0,runtime_core_esm_bundler/* resolveComponent */.up)("router-view");
   return (0,runtime_core_esm_bundler/* openBlock */.wg)(), (0,runtime_core_esm_bundler/* createElementBlock */.iD)("div", _hoisted_1, [_hoisted_2, (0,runtime_core_esm_bundler/* createElementVNode */._)("div", _hoisted_3, [_hoisted_4, (0,runtime_core_esm_bundler/* createElementVNode */._)("div", _hoisted_5, [(0,runtime_core_esm_bundler/* createVNode */.Wm)(_component_router_view)]), _hoisted_6])]);
 }
-;// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=0dbaec6b
+;// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=62bfce2a
 
 ;// CONCATENATED MODULE: ./src/assets/js/glowparticle.js
 const PI2 = Math.PI * 2;
@@ -163,10 +163,10 @@ window.onload = () => {
 };
 ;// CONCATENATED MODULE: ./src/App.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/App.vue?vue&type=style&index=0&id=0dbaec6b&lang=scss
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/App.vue?vue&type=style&index=0&id=62bfce2a&lang=scss
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/App.vue?vue&type=style&index=0&id=0dbaec6b&lang=scss
+;// CONCATENATED MODULE: ./src/App.vue?vue&type=style&index=0&id=62bfce2a&lang=scss
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(89);
@@ -192,28 +192,28 @@ const routes = [{
   path: "/login",
   name: "login",
   meta: {
-    title: "login"
+    title: "로그인"
   },
-  component: () => __webpack_require__.e(/* import() */ 175).then(__webpack_require__.bind(__webpack_require__, 9175))
+  component: () => __webpack_require__.e(/* import() */ 925).then(__webpack_require__.bind(__webpack_require__, 7925))
 }, {
   path: "/signup",
   name: "signup",
   meta: {
-    title: "signup"
+    title: "회원가입"
   },
   component: () => __webpack_require__.e(/* import() */ 790).then(__webpack_require__.bind(__webpack_require__, 1790))
 }, {
   path: "/find/loginId",
   name: "loginid",
   meta: {
-    title: "findID"
+    title: "아이디 찾기"
   },
   component: () => __webpack_require__.e(/* import() */ 475).then(__webpack_require__.bind(__webpack_require__, 4475))
 }, {
   path: "/find/loginPw",
   name: "loginpw",
   meta: {
-    title: "findPW"
+    title: "비밀번호 찾기"
   },
   component: () => __webpack_require__.e(/* import() */ 767).then(__webpack_require__.bind(__webpack_require__, 6767))
 }, {
@@ -230,6 +230,13 @@ const routes = [{
     title: "unityView"
   },
   component: () => __webpack_require__.e(/* import() */ 805).then(__webpack_require__.bind(__webpack_require__, 2805))
+}, {
+  path: "/ChangePw",
+  name: "ChangePw",
+  meta: {
+    title: "비밀번호 변경"
+  },
+  component: () => __webpack_require__.e(/* import() */ 159).then(__webpack_require__.bind(__webpack_require__, 6159))
 }];
 const router = (0,vue_router/* createRouter */.p7)({
   history: (0,vue_router/* createWebHistory */.PO)("/"),
@@ -366,7 +373,7 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + "." + {"175":"c0bf4aa5","475":"d4baa6d8","615":"48618280","767":"d6a8042c","790":"5fea8089","805":"1be22c30"}[chunkId] + ".js";
+/******/ 			return "js/" + chunkId + "." + {"159":"f9e93462","475":"d4baa6d8","615":"48618280","767":"d6a8042c","790":"5fea8089","805":"1be22c30","925":"30eb3224"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -375,7 +382,7 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.miniCssF = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "css/" + chunkId + "." + {"175":"44e59c86","475":"0dca005a","767":"6467c472","790":"b56fed96"}[chunkId] + ".css";
+/******/ 			return "css/" + chunkId + "." + {"159":"1ec48e87","475":"0dca005a","767":"6467c472","790":"b56fed96","925":"edf3a9cd"}[chunkId] + ".css";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -519,7 +526,7 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = function(chunkId, promises) {
-/******/ 			var cssChunks = {"175":1,"475":1,"767":1,"790":1};
+/******/ 			var cssChunks = {"159":1,"475":1,"767":1,"790":1,"925":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(function() {
@@ -631,9 +638,9 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [998], function() { return __webpack_require__(4765); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [998], function() { return __webpack_require__(2275); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=app.174a75aa.js.map
+//# sourceMappingURL=app.3a1327d9.js.map

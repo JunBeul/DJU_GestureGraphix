@@ -30,6 +30,7 @@
     <div class="signup-forgotten">
       <p>아직 회원이 아니신가요? <router-link tag="a" to="/signup">회원가입하기</router-link></p>
       <p><router-link tag="a" to="/find/loginId">아이디</router-link> / <router-link tag="a" to="/find/loginPw">비밀번호 찾기</router-link></p>
+      <p><router-link tag="a" to="/ChangePw">비밀번호 변경</router-link></p>
       <!--<p><a href="webBuild/GestureGraphix.html">유니티 임시</a></p>
       <p><router-link tag="a" to="/unityView">유니티 임시</router-link></p>-->
     </div>
