@@ -1,9 +1,9 @@
 <template>
   <div class="mainWarp">
-    <nav>
+    <nav class="anime">
       <ul>
-        <li class="download">
-          <router-link tag="a" to="/main/download">
+        <li class="download anime">
+          <router-link tag="a" to="/main/download" class="anime">
             <div class="icon">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"><defs><linearGradient id="a" x1="124.24" x2="404.65" y1="424.9" y2="144.49" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbc0ff"/><stop offset=".13" stop-color="#f1befd"/><stop offset=".35" stop-color="#d8baf9"/><stop offset=".63" stop-color="#aeb4f1"/><stop offset=".96" stop-color="#75abe8"/><stop offset=".99" stop-color="#6faae7"/></linearGradient><linearGradient xlink:href="#a" id="b" x1="232.68" x2="279.32" y1="193.16" y2="146.52"/></defs><path d="M424.75 169.25H301c-6.21 0-11.25 5.04-11.25 11.26v22.53h-20.31v90.88l28.63-28.72c5.25-5.26 13.75-5.26 19 0s5.25 13.8 0 19.06l-51.37 51.55a13.364 13.364 0 0 1-9.69 3.94c-3.5.05-7.02-1.26-9.69-3.94l-51.37-51.55c-5.25-5.26-5.25-13.8 0-19.06 5.25-5.26 13.75-5.26 19 0l28.63 28.72v-90.88H87.25c-6.21 0-11.25 5.04-11.25 11.26v157.68c0 6.22 5.04 11.26 11.25 11.26h337.5c6.21 0 11.25-5.04 11.25-11.26V180.51c0-6.22-5.04-11.26-11.25-11.26Z" style="fill:url(#a)"/><path d="M269.44 142.23c0-7.45-6.02-13.48-13.44-13.48s-13.44 6.04-13.44 13.48v60.81h26.87v-60.81Z" style="fill:url(#b)"/></svg>
             </div>
@@ -11,8 +11,8 @@
           </router-link>
         </li>
 
-        <li class="character">
-          <router-link tag="a" to="/main/character">
+        <li class="character anime">
+          <router-link tag="a" to="/main/character" class="anime">
             <div class="icon">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"><defs><linearGradient id="a" x1="195.04" x2="315.96" y1="221.96" y2="101.04" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbc0ff"/><stop offset=".13" stop-color="#f1befd"/><stop offset=".35" stop-color="#d8baf9"/><stop offset=".63" stop-color="#aeb4f1"/><stop offset=".96" stop-color="#75abe8"/><stop offset=".99" stop-color="#6faae7"/></linearGradient><linearGradient xlink:href="#a" id="b" x1="165.06" x2="346.94" y1="471.06" y2="289.18"/></defs><circle cx="255.5" cy="161.5" r="85.5" style="fill:url(#a)"/><path d="M381.98 355c-.4-46.99-56.64-99-125.98-99s-125.58 52.01-125.98 99H130v81h252v-81h-.02Z" style="fill:url(#b)"/></svg>
             </div>
@@ -20,8 +20,8 @@
           </router-link>
         </li>
 
-        <li class="backgraund">
-          <router-link tag="a" to="/main/backgraund">
+        <li class="backgraund anime">
+          <router-link tag="a" to="/main/backgraund" class="anime">
             <div class="icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><linearGradient id="a" x1="85.37" x2="426.63" y1="426.63" y2="85.37" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbc0ff"/><stop offset=".13" stop-color="#f1befd"/><stop offset=".35" stop-color="#d8baf9"/><stop offset=".63" stop-color="#aeb4f1"/><stop offset=".96" stop-color="#75abe8"/><stop offset=".99" stop-color="#6faae7"/></linearGradient></defs><path d="M404 76H180c-17.67 0-32 14.33-32 32v40h-40c-17.67 0-32 14.33-32 32v224c0 17.67 14.33 32 32 32h224c17.67 0 32-14.33 32-32v-40h40c17.67 0 32-14.33 32-32V108c0-17.67-14.33-32-32-32Zm5 256c0 2.76-2.24 5-5 5h-40V180c0-17.67-14.33-32-32-32H175v-40c0-2.76 2.24-5 5-5h224c2.76 0 5 2.24 5 5v224Z" style="fill:url(#a)"/></svg>
             </div>
@@ -31,8 +31,8 @@
 
         <li class="blank"></li>
 
-        <li class="setting">
-          <router-link tag="a" to="/main/setting">
+        <li class="setting anime">
+          <router-link tag="a" to="/main/setting" class="anime">
             <div class="icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><linearGradient id="a" x1="128.57" x2="383.42" y1="383.44" y2="128.59" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbc0ff"/><stop offset=".13" stop-color="#f1befd"/><stop offset=".35" stop-color="#d8baf9"/><stop offset=".63" stop-color="#aeb4f1"/><stop offset=".96" stop-color="#75abe8"/><stop offset=".99" stop-color="#6faae7"/></linearGradient></defs><path d="M429.79 207.39c-8.17-29.13-23.51-55.27-43.99-76.43-17.03 6.59-36.79 5.72-53.84-4.1-17.26-9.94-27.95-26.86-30.59-45.12-14.5-3.75-29.7-5.74-45.38-5.74s-29.76 1.86-43.77 5.34c-2.54 18.41-13.26 35.51-30.64 45.52-17.42 10.03-37.68 10.73-54.96 3.67-20.7 21.23-36.19 47.53-44.42 76.86 14.27 11.41 23.41 28.94 23.41 48.61 0 19.67-9.14 37.19-23.41 48.61 8.37 29.84 24.26 56.55 45.51 77.97 17.04-6.6 36.81-5.73 53.87 4.09 16.88 9.72 27.48 26.12 30.4 43.92 14.09 3.52 28.84 5.4 44.02 5.4s31.06-2.02 45.63-5.81c3.01-17.64 13.57-33.87 30.33-43.52 16.69-9.61 35.96-10.66 52.74-4.52 21.04-21.35 36.78-47.9 45.09-77.55-14.27-11.41-23.41-28.94-23.41-48.61 0-19.67 9.14-37.19 23.41-48.61ZM256 339.07c-46 0-83.29-37.19-83.29-83.08S210 172.91 256 172.91s83.29 37.19 83.29 83.08S302 339.07 256 339.07Z" style="fill:url(#a)"/></svg>
             </div>
