@@ -6,8 +6,20 @@ const routes = [
     redirect: "/login",
   },
   {
+    path: "/:pathMatch(.*)*",
+    redirect: "/message",
+  },
+  {
     path: "/main",
     redirect: "/main/download",
+  },
+  {
+    path: "/message",
+    name: "message",
+    meta: {
+      title: "메세지",
+    },
+    component: () => import("@/views/messageView.vue"),
   },
   {
     path: "/login",
