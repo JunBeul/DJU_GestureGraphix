@@ -37,7 +37,7 @@
 
 <script>
 export default {
-  name: 'Download',
+  name: 'download',
   data() {
     return {
       title : '',

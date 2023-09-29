@@ -12,7 +12,7 @@
           class="anime"
           v-model="signup_email"
         />
-        <button type="button">인증 메일 전송</button>
+        <button type="button" class="button">인증 메일 전송</button>
       </div>
     </form>
     <form>
