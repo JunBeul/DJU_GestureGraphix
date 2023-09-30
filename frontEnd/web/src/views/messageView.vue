@@ -1,12 +1,19 @@
 <template>
   <div class="warp">
     <h2 class="title">{{ title }}</h2>
-    <p>{{ text }}</p>
-    <p><router-link tag="a" @click="verifiedComplete" to="/login">{{verificationEmail}}이메일로 회원가입 하고 로그인 하러가기</router-link></p>
+    <p class="text">{{ text }}</p>
+    <p class="back" @click="back">뒤로가기</p>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.text {
+  margin-bottom: 25px;
+}
+.back {
+  color: #6faae7;
+  cursor: pointer;
+}
 </style>
 
 <script>
@@ -14,39 +21,13 @@ export default {
   name: "message",
   data() {
     return {
-      title: "",
-      text: "",
-      verificationEmail: "",
+      title: "404에러",
+      text: "해당 페이지는 존재하지 않는 페이지입니다. 주소를 확인해주세요.",
     };
   },
-  created() {
-    // 이메일 정보를 URL 파라미터에서 읽어옴
-    this.verificationEmail = this.$route.query.email;
-    console.log("Verification email:", this.verificationEmail);
-  },
   methods: {
-    verifiedComplete(event) {
-      event.preventDefault();
-      const veriComp = "/verifiedComplete";
-      const sendVerifiedChangeRequest = async () => {
-        try {
-          const response = await fetch(veriComp, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              verificationEmail: this.verificationEmail,
-            }),
-          });
-
-          const data = await response.json();
-          alert(data.message);
-        } catch (error) {
-          console.error(error);
-        }
-      };
-      sendVerifiedChangeRequest();
+    back: function(event){
+      window.history.go(-1);
     },
   },
 };

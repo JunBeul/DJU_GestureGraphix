@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const path = require("path");
 
-const uri = process.env.MONG_D_URL ;
+const uri = process.env.MONG_D_URL || "mongodb+srv://mongnoj892:ScRC4W4GLaoyAsm1@cluster0.c593zzk.mongodb.net/?retryWrites=true&w=majority";
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
@@ -167,7 +167,7 @@ router.post('/emailCertification', async (req, res) => {
           subject: '회원 가입 확인 이메일', // 이메일 제목
           html: `
           <p>회원 가입을 완료하려면 다음 링크를 클릭하세요:</p>
-          <a href="${baseURL}/message?email=${signup_email}">이메일 확인 링크</a>
+          <a href="${baseURL}/emailCertify?email=${signup_email}">이메일 확인 링크</a>
           `,
         };
 

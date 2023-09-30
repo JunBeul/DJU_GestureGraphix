@@ -194,7 +194,7 @@ const routes = [{
   meta: {
     title: "로그인"
   },
-  component: () => __webpack_require__.e(/* import() */ 925).then(__webpack_require__.bind(__webpack_require__, 7925))
+  component: () => __webpack_require__.e(/* import() */ 630).then(__webpack_require__.bind(__webpack_require__, 3630))
 }, {
   path: "/signup",
   name: "signup",
@@ -222,7 +222,7 @@ const routes = [{
   meta: {
     title: "message"
   },
-  component: () => __webpack_require__.e(/* import() */ 615).then(__webpack_require__.bind(__webpack_require__, 2615))
+  component: () => __webpack_require__.e(/* import() */ 344).then(__webpack_require__.bind(__webpack_require__, 9344))
 }, {
   path: "/unityView",
   name: "unityView",
@@ -230,6 +230,13 @@ const routes = [{
     title: "unityView"
   },
   component: () => __webpack_require__.e(/* import() */ 805).then(__webpack_require__.bind(__webpack_require__, 2805))
+}, {
+  path: "/emailCertify",
+  name: "emailCertify",
+  meta: {
+    title: "emailCertify"
+  },
+  component: () => __webpack_require__.e(/* import() */ 15).then(__webpack_require__.bind(__webpack_require__, 9015))
 }, {
   path: "/ChangePw",
   name: "ChangePw",
@@ -373,7 +380,7 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + "." + {"159":"f9e93462","475":"d4baa6d8","615":"48618280","767":"d6a8042c","790":"5fea8089","805":"1be22c30","925":"30eb3224"}[chunkId] + ".js";
+/******/ 			return "js/" + chunkId + "." + {"15":"9dea10a3","159":"f9e93462","344":"3bd0ba88","475":"d4baa6d8","630":"f4269dfc","767":"d6a8042c","790":"5fea8089","805":"1be22c30"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -382,7 +389,7 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.miniCssF = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "css/" + chunkId + "." + {"159":"1ec48e87","475":"0dca005a","767":"6467c472","790":"b56fed96","925":"edf3a9cd"}[chunkId] + ".css";
+/******/ 			return "css/" + chunkId + "." + {"159":"1ec48e87","344":"f6bb69ae","475":"0dca005a","630":"b6ae9f21","767":"6467c472","790":"b56fed96"}[chunkId] + ".css";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -526,7 +533,7 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = function(chunkId, promises) {
-/******/ 			var cssChunks = {"159":1,"475":1,"767":1,"790":1,"925":1};
+/******/ 			var cssChunks = {"159":1,"344":1,"475":1,"630":1,"767":1,"790":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(function() {
@@ -643,4 +650,4 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=app.3a1327d9.js.map
+//# sourceMappingURL=app.cf3c4b99.js.map

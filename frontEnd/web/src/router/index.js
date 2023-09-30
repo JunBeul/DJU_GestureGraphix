@@ -54,6 +54,14 @@ const routes = [
     component: () => import("@/views/unityView.vue"),
   },
   {
+    path: "/emailCertify",
+    name: "emailCertify",
+    meta: {
+      title: "emailCertify",
+    },
+    component: () => import("@/views/emailCertifyView.vue"),
+  },
+  {
     path: "/ChangePw",
     name: "ChangePw",
     meta: {
