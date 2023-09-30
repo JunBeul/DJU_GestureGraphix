@@ -16,6 +16,16 @@ const client = new MongoClient(uri, {
   }
 });
 
+const transporter = nodemailer.createTransport({
+  service: 'Gmail', // 이메일 서비스 제공자 설정
+  auth: {
+    user: 'sslee3680035@gmail.com', // 이메일 발신자 이메일 주소
+    pass: 'ndnf vopf nmwj ylxa', // 이메일 발신자 비밀번호
+  },
+});
+
+const baseURL = process.env.BASE_URL || "http://localhost:3000";
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -101,17 +111,35 @@ router.post('/find/loginPw', async (req, res) => {
       email: findLoginPw_email,
     };
 
-    const findPwData = await collection.find(query).toArray();
+    const findPwData = await collection.findOne(query);
 
-    if (findPwData.length === 0) {
+    if (!findPwData) {
       res.status(401).json({ message: '해당 이메일은 등록되지 않았습니다.' });
     } else {
-      const user_id = findPwData[0].user_id; // 첫 번째 사용자만 고려
+      const user_id = findPwData.user_id; // 첫 번째 사용자만 고려
       if (user_id !== findLoginPw_id) {
         res.status(401).json({ message: '입력된 ID가 잘못 되었습니다.' });
       } else {
-        const founded_pw = findPwData[0].user_pw;
-        res.status(200).json({ founded_pw });
+        /*이메일로 chagepw페이지 전송*/
+        const changePwMail = {
+          from: 'sslee3680035@gmail.com', // 이메일 발신자 주소
+          to: findLoginPw_email, // 이메일 수신자 주소
+          subject: '비밀번호 변경 이메일', // 이메일 제목
+          html: `
+          <p>해당 이메일로 가입된 GesturGraphix의 비밀번호를 변경하려면 다음 링크를 클릭하세요:</p>
+          <a href="${baseURL}/ChangePw?email=${findLoginPw_email}">비밀번호 변경 링크</a>
+          `,
+        };
+
+        await transporter.sendMail(changePwMail, (error, info) => {
+          if (error) {
+            console.error('이메일 전송 실패:', error);
+            res.status(500).json({message: '이메일 전송 실패'});
+          } else {
+            console.log('이메일 전송 성공:', info.response);
+            res.status(200).json({message: '입력한 이메일로 보낸 링크를 확인해주세요.'});
+          }
+        });
       }
     }
   } catch (err) {
@@ -152,21 +180,12 @@ router.post('/emailCertification', async (req, res) => {
         const result = await collection.insertOne(newMember);
         console.log('Inserted document with ID:', result.insertedId);
 
-        const transporter = nodemailer.createTransport({
-          service: 'Gmail', // 이메일 서비스 제공자 설정
-          auth: {
-            user: 'sslee3680035@gmail.com', // 이메일 발신자 이메일 주소
-            pass: 'ndnf vopf nmwj ylxa', // 이메일 발신자 비밀번호
-          },
-        });
-
-        const baseURL = process.env.BASE_URL || "http://localhost:3000";
         const mailOptions = {
           from: 'sslee3680035@gmail.com', // 이메일 발신자 주소
           to: signup_email, // 이메일 수신자 주소
           subject: '회원 가입 확인 이메일', // 이메일 제목
           html: `
-          <p>회원 가입을 완료하려면 다음 링크를 클릭하세요:</p>
+          <p>GestureGraphix 회원 가입을 완료하려면 다음 링크를 클릭하세요:</p>
           <a href="${baseURL}/emailCertify?email=${signup_email}">이메일 확인 링크</a>
           `,
         };
@@ -237,14 +256,12 @@ router.post('/changePassword', async (req, res) => {
     const collection = database.collection("gg_member");
 
     const {
-      present_id,
-      present_pw,
+      changPwEmail,
       change_pw,
     } = req.body;
 
     const query = {
-      user_id: present_id,
-      user_pw: present_pw,
+      email: changPwEmail,
     };
 
     const userData = await collection.findOne(query);

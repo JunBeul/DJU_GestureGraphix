@@ -67,7 +67,7 @@ const routes = [
     meta: {
       title: "비밀번호 변경",
     },
-    component: () => import("@/views/ChangePw.vue"),
+    component: () => import("@/views/changePwView.vue"),
   },
   {
     path: "/emailCertify",
@@ -76,14 +76,6 @@ const routes = [
       title: "emailCertify",
     },
     component: () => import("@/views/emailCertifyView.vue"),
-  },
-  {
-    path: "/changePw",
-    name: "changePw",
-    meta: {
-      title: "비밀번호 변경",
-    },
-    component: () => import("@/views/changePwView.vue"),
   },
 
   /** 메인 */

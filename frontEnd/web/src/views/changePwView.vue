@@ -2,28 +2,6 @@
   <div class="warp">
     <h2 class="title">비밀번호 변경</h2>
     <form>
-      <label for="id">아이디</label>
-      <input
-        type="text"
-        name="id"
-        id="id"
-        required="required"
-        class="anime"
-        v-model="present_id"
-      />
-    </form>
-    <form>
-      <label for="pw">현재 비밀번호</label>
-      <input
-        type="password"
-        name="pw"
-        id="pw"
-        required="required"
-        class="anime"
-        v-model="present_pw"
-      />
-    </form>
-    <form>
       <label for="pw">변경할 비밀번호</label>
       <input
         type="password"
@@ -49,7 +27,6 @@
       <div class="anime"></div>
       <p class="anime">확인</p>
     </button>
-    <p><router-link tag="a" to="/login">로그인 하러가기</router-link></p>
   </div>
 </template>
 
@@ -58,11 +35,14 @@ export default {
   name: "ChangePw",
   data() {
     return {
-      present_id: "",
-      present_pw: "",
       change_pw: "",
       change_confirmPW: "",
+      changPwEmail: "",
     };
+  },
+  created() {
+    this.changPwEmail = this.$route.query.email;
+    console.log("Verification email:", this.changPwEmail);
   },
   methods: {
     changePassword(event) {
@@ -76,22 +56,20 @@ export default {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              present_id: this.present_id,
-              present_pw: this.present_pw,
+              changPwEmail: this.changPwEmail,
               change_pw: this.change_pw,
             }),
           });
 
           const data = await response.json();
           alert(data.message);
+          if(response.ok) this.$router.push({ path: "/login" });
         } catch (error) {
           console.error(error);
         }
       };
       // 함수 호출
-      if (this.present_id === "") alert("아이디를 입력해 주세요.");
-      else if (this.present_pw === "") alert("현재 비밀번호를 입력해 주세요.");
-      else if (this.change_pw === "") alert("변경할 비밀번호를 입력해 주세요.");
+      if (this.change_pw === "") alert("변경할 비밀번호를 입력해 주세요.");
       else if (this.change_confirmPW === "")
         alert("비밀번호 확인 칸을 입력해 주세요.");
       else if (this.change_pw !== this.change_confirmPW)

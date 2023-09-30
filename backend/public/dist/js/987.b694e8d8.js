@@ -1,7 +1,7 @@
 "use strict";
-(self["webpackChunkweb"] = self["webpackChunkweb"] || []).push([[344],{
+(self["webpackChunkweb"] = self["webpackChunkweb"] || []).push([[987],{
 
-/***/ 9344:
+/***/ 3987:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // ESM COMPAT FLAG
@@ -16,9 +16,9 @@ __webpack_require__.d(__webpack_exports__, {
 var runtime_core_esm_bundler = __webpack_require__(3396);
 // EXTERNAL MODULE: ./node_modules/@vue/shared/dist/shared.esm-bundler.js
 var shared_esm_bundler = __webpack_require__(7139);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/messageView.vue?vue&type=template&id=a94309e8&scoped=true
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/messageView.vue?vue&type=template&id=7feb55e0&scoped=true
 
-const _withScopeId = n => (_pushScopeId("data-v-a94309e8"), n = n(), _popScopeId(), n);
+const _withScopeId = n => (_pushScopeId("data-v-7feb55e0"), n = n(), _popScopeId(), n);
 const _hoisted_1 = {
   class: "warp"
 };
@@ -34,15 +34,15 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[0] || (_cache[0] = (...args) => $options.back && $options.back(...args))
   }, "뒤로가기")]);
 }
-;// CONCATENATED MODULE: ./src/views/messageView.vue?vue&type=template&id=a94309e8&scoped=true
+;// CONCATENATED MODULE: ./src/views/messageView.vue?vue&type=template&id=7feb55e0&scoped=true
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/messageView.vue?vue&type=script&lang=js
 /* harmony default export */ var messageViewvue_type_script_lang_js = ({
   name: "message",
   data() {
     return {
-      title: "404에러",
-      text: "해당 페이지는 존재하지 않는 페이지입니다. 주소를 확인해주세요."
+      title: '404에러',
+      text: '해당 페이지는 존재하지 않는 페이지입니다. 주소를 확인해주세요.'
     };
   },
   methods: {
@@ -53,10 +53,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 });
 ;// CONCATENATED MODULE: ./src/views/messageView.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/messageView.vue?vue&type=style&index=0&id=a94309e8&lang=scss&scoped=true
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/messageView.vue?vue&type=style&index=0&id=7feb55e0&lang=scss&scoped=true
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/views/messageView.vue?vue&type=style&index=0&id=a94309e8&lang=scss&scoped=true
+;// CONCATENATED MODULE: ./src/views/messageView.vue?vue&type=style&index=0&id=7feb55e0&lang=scss&scoped=true
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(89);
@@ -68,11 +68,11 @@ var exportHelper = __webpack_require__(89);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(messageViewvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-a94309e8"]])
+const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(messageViewvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-7feb55e0"]])
 
 /* harmony default export */ var messageView = (__exports__);
 
 /***/ })
 
 }]);
-//# sourceMappingURL=344.3bd0ba88.js.map
+//# sourceMappingURL=987.b694e8d8.js.map

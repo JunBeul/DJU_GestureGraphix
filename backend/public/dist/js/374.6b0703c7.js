@@ -1,7 +1,7 @@
 "use strict";
-(self["webpackChunkweb"] = self["webpackChunkweb"] || []).push([[630],{
+(self["webpackChunkweb"] = self["webpackChunkweb"] || []).push([[374],{
 
-/***/ 3630:
+/***/ 374:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // ESM COMPAT FLAG
@@ -16,9 +16,9 @@ __webpack_require__.d(__webpack_exports__, {
 var runtime_core_esm_bundler = __webpack_require__(3396);
 // EXTERNAL MODULE: ./node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js
 var runtime_dom_esm_bundler = __webpack_require__(9242);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/loginView.vue?vue&type=template&id=aede4f8e&scoped=true
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/loginView.vue?vue&type=template&id=55d13b58&scoped=true
 
-const _withScopeId = n => ((0,runtime_core_esm_bundler/* pushScopeId */.dD)("data-v-aede4f8e"), n = n(), (0,runtime_core_esm_bundler/* popScopeId */.Cn)(), n);
+const _withScopeId = n => ((0,runtime_core_esm_bundler/* pushScopeId */.dD)("data-v-55d13b58"), n = n(), (0,runtime_core_esm_bundler/* popScopeId */.Cn)(), n);
 const _hoisted_1 = {
   class: "warp"
 };
@@ -78,21 +78,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, {
     default: (0,runtime_core_esm_bundler/* withCtx */.w5)(() => [(0,runtime_core_esm_bundler/* createTextVNode */.Uk)("비밀번호 찾기")]),
     _: 1
-  })]), (0,runtime_core_esm_bundler/* createElementVNode */._)("p", null, [(0,runtime_core_esm_bundler/* createVNode */.Wm)(_component_router_link, {
-    tag: "a",
-    to: "/ChangePw"
-  }, {
-    default: (0,runtime_core_esm_bundler/* withCtx */.w5)(() => [(0,runtime_core_esm_bundler/* createTextVNode */.Uk)("비밀번호 변경")]),
-    _: 1
-  })]), (0,runtime_core_esm_bundler/* createElementVNode */._)("p", null, [(0,runtime_core_esm_bundler/* createVNode */.Wm)(_component_router_link, {
-    tag: "a",
-    to: "/emailCertify"
-  }, {
-    default: (0,runtime_core_esm_bundler/* withCtx */.w5)(() => [(0,runtime_core_esm_bundler/* createTextVNode */.Uk)("이메일 임시")]),
-    _: 1
   })])])]);
 }
-;// CONCATENATED MODULE: ./src/views/loginView.vue?vue&type=template&id=aede4f8e&scoped=true
+;// CONCATENATED MODULE: ./src/views/loginView.vue?vue&type=template&id=55d13b58&scoped=true
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__(7658);
@@ -134,7 +122,7 @@ var es_array_push = __webpack_require__(7658);
           // 서버로부터의 응답을 기반으로 팝업 메시지를 설정
           if (response.ok) {
             this.$router.push({
-              path: "/unityView"
+              path: "/main/test"
             });
           } else {
             this.loginSuccess = false;
@@ -154,10 +142,10 @@ var es_array_push = __webpack_require__(7658);
 });
 ;// CONCATENATED MODULE: ./src/views/loginView.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/loginView.vue?vue&type=style&index=0&id=aede4f8e&lang=scss&scoped=true
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/loginView.vue?vue&type=style&index=0&id=55d13b58&lang=scss&scoped=true
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/views/loginView.vue?vue&type=style&index=0&id=aede4f8e&lang=scss&scoped=true
+;// CONCATENATED MODULE: ./src/views/loginView.vue?vue&type=style&index=0&id=55d13b58&lang=scss&scoped=true
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(89);
@@ -169,11 +157,11 @@ var exportHelper = __webpack_require__(89);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(loginViewvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-aede4f8e"]])
+const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(loginViewvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-55d13b58"]])
 
 /* harmony default export */ var loginView = (__exports__);
 
 /***/ })
 
 }]);
-//# sourceMappingURL=630.f4269dfc.js.map
+//# sourceMappingURL=374.6b0703c7.js.map
