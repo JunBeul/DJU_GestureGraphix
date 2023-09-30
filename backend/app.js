@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public', 'dist')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-app.get('/message', (req, res) => {
+app.get('/emailCertify', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dist', 'index.html'));
 });
 
