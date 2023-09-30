@@ -6,6 +6,22 @@ const routes = [
     redirect: "/login",
   },
   {
+    path: "/:pathMatch(.*)*",
+    redirect: "/message",
+  },
+  {
+    path: "/main",
+    redirect: "/main/download",
+  },
+  {
+    path: "/message",
+    name: "message",
+    meta: {
+      title: "메세지",
+    },
+    component: () => import("@/views/messageView.vue"),
+  },
+  {
     path: "/login",
     name: "login",
     meta: {
@@ -62,12 +78,57 @@ const routes = [
     component: () => import("@/views/emailCertifyView.vue"),
   },
   {
-    path: "/ChangePw",
-    name: "ChangePw",
+    path: "/changePw",
+    name: "changePw",
     meta: {
       title: "비밀번호 변경",
     },
-    component: () => import("@/views/ChangePw.vue"),
+    component: () => import("@/views/changePwView.vue"),
+  },
+
+  /** 메인 */
+  {
+    path: "/main/test",
+    name: "nav",
+    meta: {
+      title: "네비",
+    },
+    component: () => import("@/components/Navigation.vue"),
+
+    children: [
+      {
+        path: "/main/download",
+        name: "download",
+        meta: {
+          title: "다운로드",
+        },
+        component: () => import("@/views/downloadView.vue"),
+      },
+      {
+        path: "/main/character",
+        name: "character",
+        meta: {
+          title: "모델 업로드",
+        },
+        component: () => import("@/views/characterView.vue"),
+      },
+      {
+        path: "/main/backgraund",
+        name: "backgraund",
+        meta: {
+          title: "배경 업로드",
+        },
+        component: () => import("@/views/backgraundView.vue"),
+      },
+      {
+        path: "/main/setting",
+        name: "setting",
+        meta: {
+          title: "설정",
+        },
+        component: () => import("@/views/settingView.vue"),
+      },
+    ],
   },
 ];
 
