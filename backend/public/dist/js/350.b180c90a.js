@@ -1,7 +1,7 @@
 "use strict";
-(self["webpackChunkweb"] = self["webpackChunkweb"] || []).push([[626],{
+(self["webpackChunkweb"] = self["webpackChunkweb"] || []).push([[350],{
 
-/***/ 2626:
+/***/ 1350:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // ESM COMPAT FLAG
@@ -16,7 +16,7 @@ __webpack_require__.d(__webpack_exports__, {
 var runtime_core_esm_bundler = __webpack_require__(3396);
 // EXTERNAL MODULE: ./node_modules/@vue/shared/dist/shared.esm-bundler.js
 var shared_esm_bundler = __webpack_require__(7139);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/emailCertifyView.vue?vue&type=template&id=94947d2a
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/emailCertifyView.vue?vue&type=template&id=149122f7
 
 const _hoisted_1 = {
   class: "warp"
@@ -31,11 +31,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: $options.verifiedComplete,
     to: "/login"
   }, {
-    default: (0,runtime_core_esm_bundler/* withCtx */.w5)(() => [(0,runtime_core_esm_bundler/* createTextVNode */.Uk)((0,shared_esm_bundler/* toDisplayString */.zw)($data.verificationEmail) + "이메일로 회원가입 하고 로그인 하러가기", 1)]),
+    default: (0,runtime_core_esm_bundler/* withCtx */.w5)(() => [(0,runtime_core_esm_bundler/* createTextVNode */.Uk)((0,shared_esm_bundler/* toDisplayString */.zw)($data.verificationEmail) + " 이메일로 회원가입 하고 로그인 하러가기", 1)]),
     _: 1
   }, 8, ["onClick"])])]);
 }
-;// CONCATENATED MODULE: ./src/views/emailCertifyView.vue?vue&type=template&id=94947d2a
+;// CONCATENATED MODULE: ./src/views/emailCertifyView.vue?vue&type=template&id=149122f7
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/emailCertifyView.vue?vue&type=script&lang=js
 /* harmony default export */ var emailCertifyViewvue_type_script_lang_js = ({
@@ -47,33 +47,60 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       verificationEmail: ""
     };
   },
-  created() {
-    // 이메일 정보를 URL 파라미터에서 읽어옴
-    this.verificationEmail = this.$route.query.email;
-    console.log("Verification email:", this.verificationEmail);
+  mounted() {
+    this.verifyDecrypt();
   },
   methods: {
-    verifiedComplete(event) {
+    async verifyDecrypt() {
+      try {
+        const encryptedSUEData = this.$route.query.data;
+        if (!encryptedSUEData) {
+          throw new Error("Invalid encrypted data.");
+        }
+        const decryptUri = "/decrypt";
+        const response = await fetch(decryptUri, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            encryptedData: encryptedSUEData
+          })
+        });
+        if (!response.ok) {
+          throw new Error("Failed to decrypt data.");
+        } else {
+          const data = await response.json();
+          this.verificationEmail = data.email;
+        }
+      } catch (error) {
+        console.error("Error decrypting data:", error);
+        // Handle the error, show a message to the user, etc.
+      }
+    },
+
+    async verifiedComplete(event) {
       event.preventDefault();
       const veriComp = "/verifiedComplete";
-      const sendVerifiedChangeRequest = async () => {
-        try {
-          const response = await fetch(veriComp, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-              verificationEmail: this.verificationEmail
-            })
-          });
-          const data = await response.json();
-          alert(data.message);
-        } catch (error) {
-          console.error(error);
+      try {
+        const response = await fetch(veriComp, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            verificationEmail: this.verificationEmail
+          })
+        });
+        if (!response.ok) {
+          throw new Error("Failed to complete verification.");
         }
-      };
-      sendVerifiedChangeRequest();
+        const data = await response.json();
+        alert(data.message);
+      } catch (error) {
+        console.error(error);
+        // Handle the error, show a message to the user, etc.
+      }
     }
   }
 });
@@ -94,4 +121,4 @@ const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(emailCertifyVie
 /***/ })
 
 }]);
-//# sourceMappingURL=626.83a141f7.js.map
+//# sourceMappingURL=350.b180c90a.js.map

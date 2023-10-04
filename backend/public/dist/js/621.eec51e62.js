@@ -1,7 +1,7 @@
 "use strict";
-(self["webpackChunkweb"] = self["webpackChunkweb"] || []).push([[598],{
+(self["webpackChunkweb"] = self["webpackChunkweb"] || []).push([[621],{
 
-/***/ 1598:
+/***/ 2621:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // ESM COMPAT FLAG
@@ -16,9 +16,9 @@ __webpack_require__.d(__webpack_exports__, {
 var runtime_core_esm_bundler = __webpack_require__(3396);
 // EXTERNAL MODULE: ./node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js
 var runtime_dom_esm_bundler = __webpack_require__(9242);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/changePwView.vue?vue&type=template&id=9e1ce2ac&scoped=true
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/changePwView.vue?vue&type=template&id=68c3103c&scoped=true
 
-const _withScopeId = n => ((0,runtime_core_esm_bundler/* pushScopeId */.dD)("data-v-9e1ce2ac"), n = n(), (0,runtime_core_esm_bundler/* popScopeId */.Cn)(), n);
+const _withScopeId = n => ((0,runtime_core_esm_bundler/* pushScopeId */.dD)("data-v-68c3103c"), n = n(), (0,runtime_core_esm_bundler/* popScopeId */.Cn)(), n);
 const _hoisted_1 = {
   class: "warp"
 };
@@ -58,7 +58,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[2] || (_cache[2] = (...args) => $options.changePassword && $options.changePassword(...args))
   }, _hoisted_7)]);
 }
-;// CONCATENATED MODULE: ./src/views/changePwView.vue?vue&type=template&id=9e1ce2ac&scoped=true
+;// CONCATENATED MODULE: ./src/views/changePwView.vue?vue&type=template&id=68c3103c&scoped=true
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
 var es_array_push = __webpack_require__(7658);
@@ -73,11 +73,38 @@ var es_array_push = __webpack_require__(7658);
       changPwEmail: ""
     };
   },
-  created() {
-    this.changPwEmail = this.$route.query.email;
-    console.log("Verification email:", this.changPwEmail);
+  mounted() {
+    this.changePwDecrypt();
   },
   methods: {
+    async changePwDecrypt() {
+      try {
+        const encryptedFPEData = this.$route.query.data;
+        if (!encryptedFPEData) {
+          throw new Error("Invalid encrypted data.");
+        }
+        const decryptUri = "/decrypt";
+        const response = await fetch(decryptUri, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            encryptedData: encryptedFPEData
+          })
+        });
+        if (!response.ok) {
+          throw new Error("Failed to decrypt data.");
+        } else {
+          const data = await response.json();
+          this.changPwEmail = data.email;
+        }
+      } catch (error) {
+        console.error("Error decrypting data:", error);
+        // Handle the error, show a message to the user, etc.
+      }
+    },
+
     changePassword(event) {
       event.preventDefault();
       const changePwUrl = "/changePassword";
@@ -109,10 +136,10 @@ var es_array_push = __webpack_require__(7658);
 });
 ;// CONCATENATED MODULE: ./src/views/changePwView.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/changePwView.vue?vue&type=style&index=0&id=9e1ce2ac&lang=scss&scoped=true
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/changePwView.vue?vue&type=style&index=0&id=68c3103c&lang=scss&scoped=true
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/views/changePwView.vue?vue&type=style&index=0&id=9e1ce2ac&lang=scss&scoped=true
+;// CONCATENATED MODULE: ./src/views/changePwView.vue?vue&type=style&index=0&id=68c3103c&lang=scss&scoped=true
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(89);
@@ -124,11 +151,11 @@ var exportHelper = __webpack_require__(89);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(changePwViewvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-9e1ce2ac"]])
+const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(changePwViewvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-68c3103c"]])
 
 /* harmony default export */ var changePwView = (__exports__);
 
 /***/ })
 
 }]);
-//# sourceMappingURL=598.feb585bc.js.map
+//# sourceMappingURL=621.eec51e62.js.map

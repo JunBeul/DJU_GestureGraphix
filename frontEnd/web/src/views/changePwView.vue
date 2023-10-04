@@ -40,11 +40,39 @@ export default {
       changPwEmail: "",
     };
   },
-  created() {
-    this.changPwEmail = this.$route.query.email;
-    console.log("Verification email:", this.changPwEmail);
+  mounted() {
+    this.changePwDecrypt();
   },
   methods: {
+    async changePwDecrypt() {
+      try {
+        const encryptedFPEData = this.$route.query.data;
+        if (!encryptedFPEData) {
+          throw new Error("Invalid encrypted data.");
+        }
+
+        const decryptUri = "/decrypt";
+        const response = await fetch(decryptUri, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            encryptedData: encryptedFPEData,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to decrypt data.");
+        } else {
+          const data = await response.json();
+          this.changPwEmail = data.email;
+        }
+      } catch (error) {
+        console.error("Error decrypting data:", error);
+        // Handle the error, show a message to the user, etc.
+      }
+    },
     changePassword(event) {
       event.preventDefault();
       const changePwUrl = "/changePassword";

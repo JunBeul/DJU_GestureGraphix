@@ -71,7 +71,7 @@ export default {
 
           // 서버로부터의 응답을 기반으로 팝업 메시지를 설정
           if (response.ok) {
-            this.$router.push({ path: "/main/test" });
+            this.$router.push({ path: "/main/setting" });
           } else {
             this.loginSuccess = false;
           }
@@ -85,7 +85,9 @@ export default {
       };
 
       // 로그인 요청 함수 호출
-      sendLoginRequest();
+      if (this.login_id === "") alert("아이디를 입력해 주세요.");
+      else if (this.login_pw === "") alert("비밀번호를 입력해 주세요.");
+      else sendLoginRequest();
     },
   },
 };
