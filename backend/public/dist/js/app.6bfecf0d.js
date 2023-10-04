@@ -207,7 +207,7 @@ const routes = [{
   meta: {
     title: "로그인"
   },
-  component: () => __webpack_require__.e(/* import() */ 157).then(__webpack_require__.bind(__webpack_require__, 9157))
+  component: () => __webpack_require__.e(/* import() */ 516).then(__webpack_require__.bind(__webpack_require__, 6516))
 }, {
   path: "/signup",
   name: "signup",
@@ -242,14 +242,14 @@ const routes = [{
   meta: {
     title: "비밀번호 변경"
   },
-  component: () => __webpack_require__.e(/* import() */ 621).then(__webpack_require__.bind(__webpack_require__, 2621))
+  component: () => __webpack_require__.e(/* import() */ 177).then(__webpack_require__.bind(__webpack_require__, 2177))
 }, {
   path: "/emailCertify",
   name: "emailCertify",
   meta: {
     title: "emailCertify"
   },
-  component: () => __webpack_require__.e(/* import() */ 350).then(__webpack_require__.bind(__webpack_require__, 1350))
+  component: () => __webpack_require__.e(/* import() */ 125).then(__webpack_require__.bind(__webpack_require__, 5177))
 }, /** 메인 */
 {
   path: "/main/test",
@@ -285,7 +285,7 @@ const routes = [{
     meta: {
       title: "설정"
     },
-    component: () => __webpack_require__.e(/* import() */ 986).then(__webpack_require__.bind(__webpack_require__, 9986))
+    component: () => __webpack_require__.e(/* import() */ 678).then(__webpack_require__.bind(__webpack_require__, 2678))
   }]
 }];
 const router = (0,vue_router/* createRouter */.p7)({
@@ -302,10 +302,25 @@ var vuex_esm_bundler = __webpack_require__(65);
 ;// CONCATENATED MODULE: ./src/store/index.js
 
 /* harmony default export */ var store = ((0,vuex_esm_bundler/* createStore */.MT)({
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {},
+  state: {
+    userData: null // 유저 데이터 저장
+  },
+
+  mutations: {
+    setUserData(state, userData) {
+      state.userData = userData;
+    }
+  },
+  actions: {
+    updateUserData({
+      commit
+    }, userData) {
+      commit("setUserData", userData);
+    }
+  },
+  getters: {
+    getUserData: state => state.userData
+  },
   modules: {}
 }));
 ;// CONCATENATED MODULE: ./src/main.js
@@ -423,7 +438,7 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + "." + {"59":"8841fb20","157":"541fdb1f","162":"d37ef2ea","238":"2b648554","350":"b180c90a","544":"8c07a9ba","579":"c70ed02b","621":"eec51e62","647":"e984e18a","790":"e3aae635","986":"aba242ce","987":"b694e8d8"}[chunkId] + ".js";
+/******/ 			return "js/" + chunkId + "." + {"59":"8841fb20","125":"b990582e","162":"d37ef2ea","177":"fdcb1a40","238":"2b648554","516":"1f1bcf58","544":"8c07a9ba","579":"c70ed02b","647":"e984e18a","678":"13e3cd9d","790":"e3aae635","987":"b694e8d8"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -432,7 +447,7 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.miniCssF = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "css/" + chunkId + "." + {"59":"8a2df9b0","157":"8b751147","162":"f2b79627","238":"f0089625","544":"cca5d9aa","579":"89e18095","621":"b03364ee","647":"6274bd03","790":"b56fed96","986":"ae053184","987":"f473db57"}[chunkId] + ".css";
+/******/ 			return "css/" + chunkId + "." + {"59":"8a2df9b0","162":"f2b79627","177":"21a6688a","238":"f0089625","516":"4247a457","544":"cca5d9aa","579":"89e18095","647":"6274bd03","678":"f8fa7255","790":"b56fed96","987":"f473db57"}[chunkId] + ".css";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -576,7 +591,7 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = function(chunkId, promises) {
-/******/ 			var cssChunks = {"59":1,"157":1,"162":1,"238":1,"544":1,"579":1,"621":1,"647":1,"790":1,"986":1,"987":1};
+/******/ 			var cssChunks = {"59":1,"162":1,"177":1,"238":1,"516":1,"544":1,"579":1,"647":1,"678":1,"790":1,"987":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(function() {
@@ -693,4 +708,4 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=app.cffde0b2.js.map
+//# sourceMappingURL=app.6bfecf0d.js.map

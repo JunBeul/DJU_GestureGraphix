@@ -1,7 +1,7 @@
 "use strict";
-(self["webpackChunkweb"] = self["webpackChunkweb"] || []).push([[350],{
+(self["webpackChunkweb"] = self["webpackChunkweb"] || []).push([[125],{
 
-/***/ 1350:
+/***/ 5177:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // ESM COMPAT FLAG
@@ -16,7 +16,7 @@ __webpack_require__.d(__webpack_exports__, {
 var runtime_core_esm_bundler = __webpack_require__(3396);
 // EXTERNAL MODULE: ./node_modules/@vue/shared/dist/shared.esm-bundler.js
 var shared_esm_bundler = __webpack_require__(7139);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/emailCertifyView.vue?vue&type=template&id=149122f7
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/emailCertifyView.vue?vue&type=template&id=602744ce
 
 const _hoisted_1 = {
   class: "warp"
@@ -35,7 +35,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
   }, 8, ["onClick"])])]);
 }
-;// CONCATENATED MODULE: ./src/views/emailCertifyView.vue?vue&type=template&id=149122f7
+;// CONCATENATED MODULE: ./src/views/emailCertifyView.vue?vue&type=template&id=602744ce
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/emailCertifyView.vue?vue&type=script&lang=js
 /* harmony default export */ var emailCertifyViewvue_type_script_lang_js = ({
@@ -57,7 +57,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         if (!encryptedSUEData) {
           throw new Error("Invalid encrypted data.");
         }
-        const decryptUri = "/decrypt";
+        const decryptUri = "/decryptEmail";
         const response = await fetch(decryptUri, {
           method: "POST",
           headers: {
@@ -121,4 +121,4 @@ const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(emailCertifyVie
 /***/ })
 
 }]);
-//# sourceMappingURL=350.b180c90a.js.map
+//# sourceMappingURL=125.b990582e.js.map

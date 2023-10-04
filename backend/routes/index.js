@@ -69,7 +69,8 @@ router.post('/login', async (req, res) => {
     } else {
       if(loginData.isVerified === true) {
         // 사용자를 찾았고 인증이 된 경우
-        res.status(200).json({ message: '로그인 성공' });
+        const userData = { email: loginData.email, id: login_id };
+        res.status(200).json({ message: '로그인 성공', user: userData });
       } else {
         // 사용자를 찾았고 인증이 안 된 경우
         res.status(401).json({message: '로그인 실패'});
@@ -153,7 +154,7 @@ router.post('/emailCertification', async (req, res) => {
   }
 });
 
-router.post('/decrypt', async (req , res) => {
+router.post('/decryptEmail', async (req , res) => {
   const { encryptedData } = req.body;
   if (!encryptedData) {
     return res.status(400).send('Invalid data.');

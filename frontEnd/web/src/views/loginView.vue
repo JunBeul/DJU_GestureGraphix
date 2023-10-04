@@ -41,9 +41,7 @@ export default {
     return {
       login_id: "",
       login_pw: "",
-      showMessage: false,
       loginSuccess: false,
-      loginMessage: "",
     };
   },
   methods: {
@@ -71,14 +69,12 @@ export default {
 
           // 서버로부터의 응답을 기반으로 팝업 메시지를 설정
           if (response.ok) {
+            this.$store.dispatch("updateUserData", data.user);
             this.$router.push({ path: "/main/setting" });
           } else {
             this.loginSuccess = false;
+            alert(data.message);
           }
-          this.loginMessage = data.message;
-          alert(this.loginMessage);
-
-          this.showMessage = true;
         } catch (error) {
           console.error(error);
         }

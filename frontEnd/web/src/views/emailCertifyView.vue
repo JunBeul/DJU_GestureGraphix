@@ -32,7 +32,7 @@ export default {
           throw new Error("Invalid encrypted data.");
         }
 
-        const decryptUri = "/decrypt";
+        const decryptUri = "/decryptEmail";
         const response = await fetch(decryptUri, {
           method: "POST",
           headers: {
