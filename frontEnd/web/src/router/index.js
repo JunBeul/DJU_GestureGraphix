@@ -78,6 +78,16 @@ const routes = [
     component: () => import("@/views/emailCertifyView.vue"),
   },
 
+  /** 데모 */
+  {
+    path: "/riggingDemo",
+    name: "riggingDemo",
+    meta: {
+      title: "riggingDemo",
+    },
+    //component: () => import("@/components/riggingMain.vue"),
+    component: () => import("@/riggingMain/rigging.html"),
+  },
   /** 메인 */
   {
     path: "/main/test",
