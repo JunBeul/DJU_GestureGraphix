@@ -62,12 +62,12 @@ const routes = [
     component: () => import("@/views/messageView.vue"),
   },
   {
-    path: "/unityView",
-    name: "unityView",
+    path: "/ChangePw",
+    name: "ChangePw",
     meta: {
-      title: "unityView",
+      title: "비밀번호 변경",
     },
-    component: () => import("@/views/unityView.vue"),
+    component: () => import("@/views/changePwView.vue"),
   },
   {
     path: "/emailCertify",
@@ -76,14 +76,6 @@ const routes = [
       title: "emailCertify",
     },
     component: () => import("@/views/emailCertifyView.vue"),
-  },
-  {
-    path: "/changePw",
-    name: "changePw",
-    meta: {
-      title: "비밀번호 변경",
-    },
-    component: () => import("@/views/changePwView.vue"),
   },
 
   /** 메인 */

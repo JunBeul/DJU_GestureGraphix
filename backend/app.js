@@ -29,9 +29,14 @@ app.get('/emailCertify', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dist', 'index.html'));
 });
 
+app.get('/ChangePw', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'dist', 'index.html'));
+});
+
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
+
+app.use(function(req, res) {
+  res.sendFile(path.join(__dirname, 'public', 'dist', 'index.html'));
 });
 
 // error handler
