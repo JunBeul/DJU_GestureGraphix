@@ -165,11 +165,61 @@ export default {
     doSend() {
       this.closeModal();
     },
+    async findLoginPw() {
+      try {
+        // 아이디 찾기 요청을 보낼 서버 주소
+        const findPwUrl = "/find/loginPw"; // Express 서버의 로그인 라우트에 맞게 변경
+        // 아이디 찾기 요청을 보내는 비동기 함수
+        const response = await fetch(findPwUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            findLoginPw_email: this.user.email,
+            findLoginPw_id: this.user.id,
+            findLoginPw_pw: this.pw,
+          }),
+        });
+        const data = await response.json();
+        // 서버로부터의 응답을 기반으로 팝업 메시지를 설정
+        alert(data.message);
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    async removeUser() {
+      try {
+        // 아이디 찾기 요청을 보낼 서버 주소
+        const removeUserUrl = "/removeUser"; // Express 서버의 로그인 라우트에 맞게 변경
+        // 아이디 찾기 요청을 보내는 비동기 함수
+        const response = await fetch(removeUserUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            removeUser_email: this.user.email,
+            removeUser_id: this.user.id,
+            removeUser_pw: this.pw,
+          }),
+        });
+        const data = await response.json();
+        // 서버로부터의 응답을 기반으로 팝업 메시지를 설정
+        alert(data.message);
+        if (response.ok) this.$router.push({ path: "/login" });
+      } catch (error) {
+        console.error(error);
+      }
+    },
     pushData() {
       if (this.pw != "") {
-        alert(
-          `선택한 타입 = ${this.selectElement} / 입력한 비밀번호 = ${this.pw}`
-        );
+        if (this.selectElement === "changePw") {
+          this.findLoginPw();
+        }
+        if (this.selectElement === "withdrawal") {
+          this.removeUser();
+        }
         /* 유저가 어떤 버튼을 눌러 모달창에 접근했는지 selectElement 안에 저장해둠
         비밀변호 변경: changePw - 비밀번호 변경 페이지로 이동
         모델 파일들 초기화: resetChar

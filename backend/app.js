@@ -9,17 +9,6 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-const crypto = require('crypto');
-const secretKey = 'your_secret_key'; // Replace with your secret key
-
-// Function to decrypt user data
-function decryptData(encryptedData) {
-  const decipher = crypto.createDecipher('aes-256-cbc', secretKey);
-  let decrypted = decipher.update(encryptedData, 'hex', 'utf-8');
-  decrypted += decipher.final('utf-8');
-  return decrypted;
-}
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -45,8 +34,9 @@ app.get('/ChangePw', (req, res) => {
 });
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
+
+app.use(function(req, res) {
+  res.sendFile(path.join(__dirname, 'public', 'dist', 'index.html'));
 });
 
 // error handler

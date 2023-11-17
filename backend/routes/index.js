@@ -19,7 +19,7 @@ const transporter = nodemailer.createTransport({
   service: 'Gmail', // 이메일 서비스 제공자 설정
   auth: {
     user: 'sslee3680035@gmail.com', // 이메일 발신자 이메일 주소
-    pass: 'ndnf vopf nmwj ylxa', // 이메일 발신자 비밀번호
+    pass: process.env.EMAIL_PASS || 'ndnf vopf nmwj ylxa', // 이메일 발신자 비밀번호
   },
 });
 const baseURL = process.env.BASE_URL || "http://localhost:3000";
@@ -260,7 +260,7 @@ router.post('/find/loginPw', async (req, res) => {
     const database = client.db("gesture_graphix");
     const collection = database.collection("gg_member");
 
-    const { findLoginPw_email, findLoginPw_id } = req.body;
+    const { findLoginPw_email, findLoginPw_id, findLoginPw_pw} = req.body;
 
     const query = {
       email: findLoginPw_email,
@@ -271,9 +271,12 @@ router.post('/find/loginPw', async (req, res) => {
     if (!findPwData) {
       res.status(401).json({ message: '해당 이메일은 등록되지 않았습니다.' });
     } else {
-      const user_id = findPwData.user_id; // 첫 번째 사용자만 고려
+      const user_id = findPwData.user_id;
+      const user_pw = findPwData.user_pw;
       if (user_id !== findLoginPw_id) {
         res.status(401).json({ message: '입력된 ID가 잘못 되었습니다.' });
+      } else if (findLoginPw_email && findLoginPw_id && findLoginPw_pw && user_pw !== findLoginPw_pw) {
+        res.status(401).json({ message: '입력된 PW가 잘못 되었습니다.' });
       } else {
         /*이메일로 chagepw페이지 전송*/
         const findPwEmailData = { email: findLoginPw_email };
@@ -338,6 +341,48 @@ router.post('/changePassword', async (req, res) => {
         res.status(401).json({ message: '변경에 실패했습니다.' });
       } else {
         res.status(200).json({ message: '비밀번호 변경 완료' });
+      }
+    }
+  } catch (err) {
+    console.error("Error:", err);
+    res.status(500).json({ message: '서버 오류가 발생했습니다.' });
+  } finally {
+    await client.close();
+  }
+});
+router.post('/removeUser', async (req, res) => {
+  try {
+    // MongoDB 클라이언트 연결
+    await client.connect();
+
+    const database = client.db("gesture_graphix");
+    const collection = database.collection("gg_member");
+
+    const { removeUser_email, removeUser_id, removeUser_pw} = req.body;
+
+    const query = {
+      email: removeUser_email,
+    };
+
+    const removeUserData = await collection.findOne(query);
+
+    if (!removeUserData) {
+      res.status(401).json({ message: '해당 이메일은 등록되지 않았습니다.' });
+    } else {
+      const user_id = removeUserData.user_id;
+      const user_pw = removeUserData.user_pw;
+      if (user_id !== removeUser_id) {
+        res.status(401).json({ message: '입력된 ID가 잘못 되었습니다.' });
+      } else if (user_pw !== removeUser_pw) {
+        res.status(401).json({ message: '입력된 PW가 잘못 되었습니다.' });
+      } else {
+        const result = await collection.deleteOne(query);
+
+        if (result.deletedCount === 1) {
+          res.status(200).json({ message: '회원 탈퇴가 완료되었습니다.' });
+        } else {
+          res.status(404).json({ message: '회원 탈퇴에 실패했습니다.' });
+        }
       }
     }
   } catch (err) {
