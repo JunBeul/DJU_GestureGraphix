@@ -1,0 +1,37 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css);
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  overflow: hidden;
+}
+#container{
+  display: flex;
+}
+.output_canvas{
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  z-index: 1;
+  border-radius: 25px;
+}
+.mainVue{
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.mainTitle{
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  font-family: 'NanumSquare', sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  z-index: 1;
+  color: #6FAAE7;
+}
