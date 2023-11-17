@@ -118,7 +118,7 @@
     background-color: #fff;
     font-weight: bold;
   }
-  
+
   .main{
     flex-grow: 1;
     margin: 0 25px;
@@ -142,7 +142,7 @@
         svg{
           width: 100%;
           .line{
-            
+
             transform-origin: 50% 50%;
           }
         }
@@ -180,8 +180,8 @@ export default {
   },
   methods: {
     play: function(event){
-      alert('Hello');
-    }
+      this.$router.push({ path: "/motionCapt" });
+    },
   },
 }
 </script>

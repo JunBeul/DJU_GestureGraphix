@@ -1,7 +1,7 @@
 "use strict";
-(self["webpackChunkweb"] = self["webpackChunkweb"] || []).push([[544],{
+(self["webpackChunkweb"] = self["webpackChunkweb"] || []).push([[345],{
 
-/***/ 1544:
+/***/ 4345:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // ESM COMPAT FLAG
@@ -14,9 +14,9 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: ./node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js
 var runtime_core_esm_bundler = __webpack_require__(3396);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Navigation.vue?vue&type=template&id=08efb903&scoped=true
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Navigation.vue?vue&type=template&id=6031c1c8&scoped=true
 
-const _withScopeId = n => ((0,runtime_core_esm_bundler/* pushScopeId */.dD)("data-v-08efb903"), n = n(), (0,runtime_core_esm_bundler/* popScopeId */.Cn)(), n);
+const _withScopeId = n => ((0,runtime_core_esm_bundler/* pushScopeId */.dD)("data-v-6031c1c8"), n = n(), (0,runtime_core_esm_bundler/* popScopeId */.Cn)(), n);
 const _hoisted_1 = {
   class: "mainWarp"
 };
@@ -318,24 +318,29 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[0] || (_cache[0] = (...args) => $options.play && $options.play(...args))
   }, _hoisted_20)])]);
 }
-;// CONCATENATED MODULE: ./src/components/Navigation.vue?vue&type=template&id=08efb903&scoped=true
+;// CONCATENATED MODULE: ./src/components/Navigation.vue?vue&type=template&id=6031c1c8&scoped=true
 
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.push.js
+var es_array_push = __webpack_require__(7658);
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Navigation.vue?vue&type=script&lang=js
+
 /* harmony default export */ var Navigationvue_type_script_lang_js = ({
   name: 'nav',
   data() {},
   methods: {
     play: function (event) {
-      alert('Hello');
+      this.$router.push({
+        path: "/motionCapt"
+      });
     }
   }
 });
 ;// CONCATENATED MODULE: ./src/components/Navigation.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Navigation.vue?vue&type=style&index=0&id=08efb903&lang=scss&scoped=true
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Navigation.vue?vue&type=style&index=0&id=6031c1c8&lang=scss&scoped=true
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/Navigation.vue?vue&type=style&index=0&id=08efb903&lang=scss&scoped=true
+;// CONCATENATED MODULE: ./src/components/Navigation.vue?vue&type=style&index=0&id=6031c1c8&lang=scss&scoped=true
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(89);
@@ -347,11 +352,11 @@ var exportHelper = __webpack_require__(89);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(Navigationvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-08efb903"]])
+const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(Navigationvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-6031c1c8"]])
 
 /* harmony default export */ var Navigation = (__exports__);
 
 /***/ })
 
 }]);
-//# sourceMappingURL=544.8c07a9ba.js.map
+//# sourceMappingURL=345.d1b3976f.js.map
