@@ -19,13 +19,13 @@ const transporter = nodemailer.createTransport({
   service: 'Gmail', // 이메일 서비스 제공자 설정
   auth: {
     user: 'sslee3680035@gmail.com', // 이메일 발신자 이메일 주소
-    pass: process.env.EMAIL_PASS || 'ndnf vopf nmwj ylxa', // 이메일 발신자 비밀번호
+    pass: process.env.EMAIL_PASS || "ndnf vopf nmwj ylxa", // 이메일 발신자 비밀번호
   },
 });
 const baseURL = process.env.BASE_URL || "http://localhost:3000";
 
 const crypto = require('crypto');
-const secretKey = process.env.SECRET_KEY || 'your_secret_key'; // Replace with your secret key
+const secretKey = process.env.SECRET_KEY || "safvqxc"; // Replace with your secret key
 
 // Function to encrypt user data
 function encryptData(data) {

@@ -250,13 +250,6 @@ const routes = [{
     title: "emailCertify"
   },
   component: () => __webpack_require__.e(/* import() */ 125).then(__webpack_require__.bind(__webpack_require__, 5177))
-}, {
-  path: "/motionCapt",
-  name: "motionCapt",
-  meta: {
-    title: "motionCapt"
-  },
-  component: () => __webpack_require__.e(/* import() */ 626).then(__webpack_require__.bind(__webpack_require__, 8626))
 }, /** 메인 */
 {
   path: "/main/test",
@@ -264,7 +257,7 @@ const routes = [{
   meta: {
     title: "네비"
   },
-  component: () => __webpack_require__.e(/* import() */ 345).then(__webpack_require__.bind(__webpack_require__, 4345)),
+  component: () => __webpack_require__.e(/* import() */ 56).then(__webpack_require__.bind(__webpack_require__, 2056)),
   children: [{
     path: "/main/download",
     name: "download",
@@ -445,7 +438,7 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + "." + {"59":"8841fb20","125":"b990582e","158":"af02f967","162":"d37ef2ea","177":"fdcb1a40","238":"2b648554","248":"e377b2b1","345":"d1b3976f","591":"6e5d0df0","626":"e76945ae","647":"e984e18a","790":"e3aae635","987":"b694e8d8"}[chunkId] + ".js";
+/******/ 			return "js/" + chunkId + "." + {"56":"f2cdb7b1","59":"8841fb20","125":"b990582e","158":"af02f967","162":"d37ef2ea","177":"fdcb1a40","238":"2b648554","248":"e377b2b1","591":"6e5d0df0","647":"e984e18a","790":"e3aae635","987":"b694e8d8"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -454,7 +447,7 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.miniCssF = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "css/" + chunkId + "." + {"59":"8a2df9b0","158":"f8194a06","162":"f2b79627","177":"21a6688a","238":"f0089625","248":"4cb97780","345":"f4a22e12","591":"e78aa46b","647":"6274bd03","790":"b56fed96","987":"f473db57"}[chunkId] + ".css";
+/******/ 			return "css/" + chunkId + "." + {"56":"3e6d0177","59":"8a2df9b0","158":"f8194a06","162":"f2b79627","177":"21a6688a","238":"f0089625","248":"4cb97780","591":"e78aa46b","647":"6274bd03","790":"b56fed96","987":"f473db57"}[chunkId] + ".css";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -598,7 +591,7 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = function(chunkId, promises) {
-/******/ 			var cssChunks = {"59":1,"158":1,"162":1,"177":1,"238":1,"248":1,"345":1,"591":1,"647":1,"790":1,"987":1};
+/******/ 			var cssChunks = {"56":1,"59":1,"158":1,"162":1,"177":1,"238":1,"248":1,"591":1,"647":1,"790":1,"987":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(function() {
@@ -715,4 +708,4 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=app.20a09a7a.js.map
+//# sourceMappingURL=app.fe0608ba.js.map

@@ -77,14 +77,6 @@ const routes = [
     },
     component: () => import("@/views/emailCertifyView.vue"),
   },
-  {
-    path: "/motionCapt",
-    name: "motionCapt",
-    meta: {
-      title: "motionCapt",
-    },
-    component: () => import("@/views/unityView"),
-  },
 
   /** 데모 */
   {

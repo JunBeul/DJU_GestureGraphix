@@ -180,7 +180,9 @@ export default {
   },
   methods: {
     play: function(event){
-      this.$router.push({ path: "/motionCapt" });
+      this.$router.push({ path: "src/riggingMain/index_cam.html" });
+      const fileUrl = "";
+      window.open(fileUrl, "_blank");
     },
   },
 }
