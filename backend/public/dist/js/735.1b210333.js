@@ -1,7 +1,7 @@
 "use strict";
-(self["webpackChunkweb"] = self["webpackChunkweb"] || []).push([[248],{
+(self["webpackChunkweb"] = self["webpackChunkweb"] || []).push([[735],{
 
-/***/ 1248:
+/***/ 735:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // ESM COMPAT FLAG
@@ -14,9 +14,9 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: ./node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js
 var runtime_core_esm_bundler = __webpack_require__(3396);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/downloadView.vue?vue&type=template&id=61e939c1&scoped=true
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/downloadView.vue?vue&type=template&id=4e6d87ca&scoped=true
 
-const _withScopeId = n => ((0,runtime_core_esm_bundler/* pushScopeId */.dD)("data-v-61e939c1"), n = n(), (0,runtime_core_esm_bundler/* popScopeId */.Cn)(), n);
+const _withScopeId = n => ((0,runtime_core_esm_bundler/* pushScopeId */.dD)("data-v-4e6d87ca"), n = n(), (0,runtime_core_esm_bundler/* popScopeId */.Cn)(), n);
 const _hoisted_1 = {
   class: "warp"
 };
@@ -39,7 +39,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[0] || (_cache[0] = (...args) => $options.download && $options.download(...args))
   }, _hoisted_5), _hoisted_6]);
 }
-;// CONCATENATED MODULE: ./src/views/downloadView.vue?vue&type=template&id=61e939c1&scoped=true
+;// CONCATENATED MODULE: ./src/views/downloadView.vue?vue&type=template&id=4e6d87ca&scoped=true
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/downloadView.vue?vue&type=script&lang=js
 /* harmony default export */ var downloadViewvue_type_script_lang_js = ({
@@ -52,17 +52,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   },
   methods: {
     download: function (event) {
-      const fileUrl = ""; // 실제 AWS S3 파일 URL로 대체
+      const fileUrl = "https://elasticbeanstalk-ap-northeast-2-932716233989.s3.ap-northeast-2.amazonaws.com/GestureGraphix+Installer.zip"; // 실제 AWS S3 파일 URL로 대체
       window.open(fileUrl, "_blank"); // 새 창에서 파일 다운로드
     }
   }
 });
 ;// CONCATENATED MODULE: ./src/views/downloadView.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/downloadView.vue?vue&type=style&index=0&id=61e939c1&lang=scss&scoped=true
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-22.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-22.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-22.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-22.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/downloadView.vue?vue&type=style&index=0&id=4e6d87ca&lang=scss&scoped=true
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/views/downloadView.vue?vue&type=style&index=0&id=61e939c1&lang=scss&scoped=true
+;// CONCATENATED MODULE: ./src/views/downloadView.vue?vue&type=style&index=0&id=4e6d87ca&lang=scss&scoped=true
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(89);
@@ -74,11 +74,11 @@ var exportHelper = __webpack_require__(89);
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(downloadViewvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-61e939c1"]])
+const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(downloadViewvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-4e6d87ca"]])
 
 /* harmony default export */ var downloadView = (__exports__);
 
 /***/ })
 
 }]);
-//# sourceMappingURL=248.e377b2b1.js.map
+//# sourceMappingURL=735.1b210333.js.map

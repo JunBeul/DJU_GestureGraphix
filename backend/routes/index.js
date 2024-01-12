@@ -4,7 +4,7 @@ var router = express.Router();
 //db 연결 코드
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const path = require("path");
-const uri = process.env.MONG_D_URL || "mongodb+srv://mongnoj892:ScRC4W4GLaoyAsm1@cluster0.c593zzk.mongodb.net/?retryWrites=true&w=majority";
+const uri = process.env.MONG_D_URL ;
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
@@ -19,13 +19,13 @@ const transporter = nodemailer.createTransport({
   service: 'Gmail', // 이메일 서비스 제공자 설정
   auth: {
     user: 'sslee3680035@gmail.com', // 이메일 발신자 이메일 주소
-    pass: process.env.EMAIL_PASS || "ndnf vopf nmwj ylxa", // 이메일 발신자 비밀번호
+    pass: process.env.EMAIL_PASS, // 이메일 발신자 비밀번호
   },
 });
 const baseURL = process.env.BASE_URL || "http://localhost:3000";
 
 const crypto = require('crypto');
-const secretKey = process.env.SECRET_KEY || "safvqxc"; // Replace with your secret key
+const secretKey = process.env.SECRET_KEY || "aschqv"; // Replace with your secret key
 
 // Function to encrypt user data
 function encryptData(data) {

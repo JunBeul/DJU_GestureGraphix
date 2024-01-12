@@ -50,7 +50,7 @@ export default {
   methods: {
     download: function (event) {
       const fileUrl =
-        ""; // 실제 AWS S3 파일 URL로 대체
+        "https://elasticbeanstalk-ap-northeast-2-932716233989.s3.ap-northeast-2.amazonaws.com/GestureGraphix+Installer.zip"; // 실제 AWS S3 파일 URL로 대체
       window.open(fileUrl, "_blank"); // 새 창에서 파일 다운로드
     },
   },

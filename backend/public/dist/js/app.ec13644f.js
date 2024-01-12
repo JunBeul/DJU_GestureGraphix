@@ -250,6 +250,15 @@ const routes = [{
     title: "emailCertify"
   },
   component: () => __webpack_require__.e(/* import() */ 125).then(__webpack_require__.bind(__webpack_require__, 5177))
+}, /** 데모 */
+{
+  path: "/riggingDemo",
+  name: "riggingDemo",
+  meta: {
+    title: "riggingDemo"
+  },
+  //component: () => import("@/components/riggingMain.vue"),
+  component: () => __webpack_require__.e(/* import() */ 713).then(__webpack_require__.bind(__webpack_require__, 9713))
 }, /** 메인 */
 {
   path: "/main/test",
@@ -257,14 +266,14 @@ const routes = [{
   meta: {
     title: "네비"
   },
-  component: () => __webpack_require__.e(/* import() */ 56).then(__webpack_require__.bind(__webpack_require__, 2056)),
+  component: () => __webpack_require__.e(/* import() */ 214).then(__webpack_require__.bind(__webpack_require__, 214)),
   children: [{
     path: "/main/download",
     name: "download",
     meta: {
       title: "다운로드"
     },
-    component: () => __webpack_require__.e(/* import() */ 248).then(__webpack_require__.bind(__webpack_require__, 1248))
+    component: () => __webpack_require__.e(/* import() */ 735).then(__webpack_require__.bind(__webpack_require__, 735))
   }, {
     path: "/main/character",
     name: "character",
@@ -438,7 +447,7 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + "." + {"56":"f2cdb7b1","59":"8841fb20","125":"b990582e","158":"af02f967","162":"d37ef2ea","177":"fdcb1a40","238":"2b648554","248":"e377b2b1","591":"6e5d0df0","647":"e984e18a","790":"e3aae635","987":"b694e8d8"}[chunkId] + ".js";
+/******/ 			return "js/" + chunkId + "." + {"59":"8841fb20","125":"b990582e","158":"af02f967","162":"d37ef2ea","177":"fdcb1a40","214":"57b604d4","238":"2b648554","591":"6e5d0df0","647":"e984e18a","713":"ce716f15","735":"1b210333","790":"e3aae635","987":"b694e8d8"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -447,7 +456,7 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.miniCssF = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "css/" + chunkId + "." + {"56":"3e6d0177","59":"8a2df9b0","158":"f8194a06","162":"f2b79627","177":"21a6688a","238":"f0089625","248":"4cb97780","591":"e78aa46b","647":"6274bd03","790":"b56fed96","987":"f473db57"}[chunkId] + ".css";
+/******/ 			return "css/" + chunkId + "." + {"59":"8a2df9b0","158":"f8194a06","162":"f2b79627","177":"21a6688a","214":"48c22b7f","238":"f0089625","591":"e78aa46b","647":"6274bd03","713":"d27c054c","735":"4b8fe596","790":"b56fed96","987":"f473db57"}[chunkId] + ".css";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -591,7 +600,7 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.miniCss = function(chunkId, promises) {
-/******/ 			var cssChunks = {"56":1,"59":1,"158":1,"162":1,"177":1,"238":1,"248":1,"591":1,"647":1,"790":1,"987":1};
+/******/ 			var cssChunks = {"59":1,"158":1,"162":1,"177":1,"214":1,"238":1,"591":1,"647":1,"713":1,"735":1,"790":1,"987":1};
 /******/ 			if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 			else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 				promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(function() {
@@ -608,7 +617,7 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
 /******/ 	!function() {
-/******/ 		// no baseURI
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
 /******/ 		
 /******/ 		// object to store loaded and loading chunks
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
@@ -708,4 +717,4 @@ var vuex_esm_bundler = __webpack_require__(65);
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=app.fe0608ba.js.map
+//# sourceMappingURL=app.ec13644f.js.map
